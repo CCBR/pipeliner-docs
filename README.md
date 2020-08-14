@@ -1,4 +1,7 @@
 # Pipeliner Documentation  
+
+![badge](https://action-badges.now.sh/CCBR/pipeliner-docs?action=ci)  [![GitHub issues](https://img.shields.io/github/issues/CCBR/pipeliner-docs)](https://github.com/CCBR/pipeliner-docs/issues)  [![GitHub license](https://img.shields.io/github/license/CCBR/pipeliner-docs)](https://github.com/CCBR/pipeliner-docs/blob/master/LICENSE)  
+
 Pipeline *Runner*, also known as Pipeline*r*, is an open-source and scalable solution for analyzing next-generation sequencing data. Pipeliner provides access to the same best-practices NGS pipelines developed and benchmarked by experts at [CCBR](https://ccbr.ccr.cancer.gov/) and [NCBR](https://ncbr.ncifcrf.gov/). This repository is the main source of documentation for users and developers working with or contributing to [Pipeline*r*](https://github.com/CCBR/Pipeliner).
 
 ### Installation
