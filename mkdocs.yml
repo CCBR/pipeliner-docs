@@ -89,16 +89,21 @@ nav:
       - Installation: dev/lorem_ipsum.md
       - Customization: dev/lorem_ipsum.md
   - Pipelines:
+    - ChIP-seq:
+      - User Tutorial: ChIP-seq/ChIP-seq.md
+      - Output Files: ChIP-seq/ChIP-seq-output-files.md 
+      - Resources: ChIP-seq/ChIP-seq-tools.md
     - RNA-seq:
       - Theory and Practical Guide: RNA-seq/Theory-and-practical-guide-for-RNA-seq.md
       - Overview of Pipelines: RNA-seq/Gene-and-isoform-expression-overview.md
       - Quick Start: RNA-seq/TLDR-RNA-seq.md
       - User Tutorial: RNA-seq/Gene-and-isoform-expression-guided-tutorial.md
       - Resources: RNA-seq/Differential-expression-pipeline-tools-and-versions.md
-    - ChIP-seq:
-      - User Tutorial: ChIP-seq/ChIP-seq.md
-      - Output Files: ChIP-seq/ChIP-seq-output-files.md 
-      - Resources: ChIP-seq/ChIP-seq-tools.md
+    - miRNA-seq:
+      - Overview: miRNA-seq/overview-miRNA-seq.md
+      - User Tutorial: miRNA-seq/TLDR-miRNASeq.md
+      - Output Files: miRNA-seq/miRSeq-Output-Files.md
+      - Resources: miRNA-seq/miRSeq-Tools-and-Versions.md
   - FAQ:
     - Troubleshooting: troubleshooting.md
     - Data Privacy: dev/lorem_ipsum.md
