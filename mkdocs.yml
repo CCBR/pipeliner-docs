@@ -1,0 +1,108 @@
+# Project Information
+site_name: Pipeliner Documentation
+site_author: Skyler Kuhn
+site_description: >-
+  Pipeliner is an open-source and scalable solution for analyzing 
+  next-generation sequencing data. Pipeliner provides access to 
+  the same best-practices NGS pipelines developed and benchmarked 
+  by experts at CCBR and NCBR. This repository is the main source 
+  of documentation for users and developers working with or 
+  contributing to Pipeliner.
+
+# Repository
+repo_name: CCBR/Pipeliner
+repo_url: https://github.com/CCBR/Pipeliner
+
+# Copyright
+copyright: Copyright &copy; 2020 CCBR
+
+# Configuration
+theme:
+  name: material
+  palette:
+    scheme: default
+  logo: assets/icons/doc-book.svg
+  favicon: assets/favicon/favicon.ico
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/solid/users
+      link: http://bioinformatics.cancer.gov
+    - icon: fontawesome/brands/github
+      link: https://github.com/CCBR
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/orgs/nciccbr/repositories
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page Tree
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting started:
+    - Users:
+      - Prerequisites: dev/lorem_ipsum.md
+      - Installation: dev/lorem_ipsum.md
+    - Developers:
+      - Installation: dev/lorem_ipsum.md
+      - Customization: dev/lorem_ipsum.md
+  - Pipelines:
+    - RNA-seq:
+      - Theory and Practical Guide: RNA-seq/Theory-and-practical-guide-for-RNA-seq.md
+      - Overview of Pipelines: RNA-seq/Gene-and-isoform-expression-overview.md
+      - Quick Start: RNA-seq/TLDR-RNA-seq.md
+      - User Tutorial: RNA-seq/Gene-and-isoform-expression-guided-tutorial.md
+      - Resources: RNA-seq/Differential-expression-pipeline-tools-and-versions.md
+    - ChIP-seq:
+      - User Tutorial: ChIP-seq/ChIP-seq.md
+      - Output Files: ChIP-seq/ChIP-seq-output-files.md 
+      - Resources: ChIP-seq/ChIP-seq-tools.md
+  - FAQ:
+    - Troubleshooting: troubleshooting.md
+    - Data Privacy: dev/lorem_ipsum.md
+  - Contribute: community-and-contribution.md
+  - Changelog: changelog.md
+  - Contact: contact-us.md 
+  - License: license.md
