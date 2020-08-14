@@ -23,7 +23,7 @@
 |edgeR|3.28.1|Normalization and differential miR expression analysis|[13](#ref13), [14](#ref14)|
 |R|3.6.1|Programming language used to run edgeR|[15](#ref15)|
 
-#### References
+## References
 <a name=ref1><sup>1</sup></a> Andrews, S. 2018. "FastQC: A quality control tool for high throughput sequence data." http://www.bioinformatics.babraham.ac.uk/projects/fastqc/. Version 0.11.5
 
 <a name=ref2><sup>2</sup></a> Martin, M. 2011. "Cutadapt removes adapter sequences from high-throughput sequencing reads." _EMBnet.journal_ 17(1): 10-12. [doi: 10.14806/ej.17.1.200](https://doi.org/10.14806/ej.17.1.200)

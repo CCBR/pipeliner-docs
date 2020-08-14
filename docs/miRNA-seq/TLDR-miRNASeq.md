@@ -42,7 +42,7 @@ The `contrasts.tab` file contains the comparisons to be made by differential exp
 Group2    Group1    0.5      2
 ```
 
-### Dry-running the pipeline
+### Dry-running the Pipeline
 
 After setting up the data directory, the working directory, the `groups.tab` file, and the `contrasts.tab` file, click the `Dry Run` button. This will launch a preliminary pipeline check to ensure that all necessary files are present and accessible. A new window will open showing the steps that will be run in the pipeline. Scroll to the end of the dry run to confirm that the process names and number of processes run are identical at the beginning and end.
 

@@ -94,8 +94,8 @@ nav:
       - Output Files: ChIP-seq/ChIP-seq-output-files.md 
       - Resources: ChIP-seq/ChIP-seq-tools.md
     - RNA-seq:
-      - Theory and Practical Guide: RNA-seq/Theory-and-practical-guide-for-RNA-seq.md
-      - Overview of Pipelines: RNA-seq/Gene-and-isoform-expression-overview.md
+      - Theory: RNA-seq/Theory-and-practical-guide-for-RNA-seq.md
+      - Overview: RNA-seq/Gene-and-isoform-expression-overview.md
       - Quick Start: RNA-seq/TLDR-RNA-seq.md
       - User Tutorial: RNA-seq/Gene-and-isoform-expression-guided-tutorial.md
       - Resources: RNA-seq/Differential-expression-pipeline-tools-and-versions.md
@@ -104,6 +104,11 @@ nav:
       - User Tutorial: miRNA-seq/TLDR-miRNASeq.md
       - Output Files: miRNA-seq/miRSeq-Output-Files.md
       - Resources: miRNA-seq/miRSeq-Tools-and-Versions.md
+    - scRNA-seq:
+      - Overview: scRNA-seq/overview-scRNA-seq.md
+      - User Tutorial: scRNA-seq/TLDR-Single-Cell-RNASeq.md
+      - Output Files: scRNA-seq/scRNASeq-Output-Files.md
+      - Resources: scRNA-seq/scRNASeq-Tools-and-Versions.md
   - FAQ:
     - Troubleshooting: troubleshooting.md
     - Data Privacy: dev/lorem_ipsum.md
