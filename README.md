@@ -9,7 +9,7 @@ Pipeline *Runner*, also known as Pipeline*r*, is an open-source and scalable sol
 ### Installation
 ```bash
 # Clone the Repository
-git clone https://github.com/skchronicles/pipeliner-docs.git
+git clone https://github.com/CCBR/pipeliner-docs.git
 # Create a virtual environment
 python3 -m venv .venv
 # Activate the virtual environment
