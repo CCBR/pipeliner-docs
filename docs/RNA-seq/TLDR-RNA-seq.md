@@ -77,12 +77,14 @@ _To run the pipeline, you will need to provide two PATHS:_
 Within **`basename`**, there are additional conventions you must follow. Please carefully read through all the rules for creating filenames.
 
 #### Rules for naming raw data files
-  1. ❌ Filenames _should NOT_ contain spaces!  
-  2. ❌ Filenames _should NOT_ contain hyphens or minus signs (i.e. `-`)!  
-  3. ❌ Filenames _should NOT_ start with a number!  
-  4. ❌ Filenames _should NOT_ contain the strings `sample`, `R1` or `R2`!  
-  5. ✅ Filenames can contain underscores.
 
+| Rule | Description                     | Good Name       | Bad Name       |
+| -- | ------------------------------- | --------------- | -------------- |
+| 1    | :material-close: Filenames _CANNOT_ contain spaces | `Tumor_SC` | `Tumor SC` |
+| 2    | :material-close: Filenames _CANNOT_ contain hyphens: `-` | `WT_rep1` | `WT-rep1` |
+| 3    | :material-close: Filenames _CANNOT_ start with a number | `t_ea` | `1_t_ea` |
+| 4    | :material-close: Filenames _CANNOT_ contain the strings `sample`, `R1` or `R2` | `Tumor_SC` | `sample_SC`|
+| 5    | :material-check-all: Filenames can contain underscores: `_` | `T_S26_WT` | `T_S26-SC`|
 
 ## Run Quantification and Quality-control pipeline
 
@@ -97,16 +99,80 @@ If this the first time running the pipeline for a given set of samples, you will
 > _**Please note:**_ This will create the directory you defined in the `Working Directory` field. You only need to do this one time for any user-defined `Working Directory`. Please do not click this button again after the directory has been initialized or when you run the second half of the RNA-seq pipeline (Differential Expression pipeline).
 
 **Step 1.) Understanding required sample metadata**  
-Next, you will need to provide `groups.tab` file. The `groups.tab` is a tab-delimited sample sheet file with three required columns. This file contains metadata for each sample. Here are an example and a description of each column:
+Next, you will need to provide `groups.tab` file. The `groups.tab` is a tab-delimited sample sheet file with three required columns. This file contains metadata for each sample. Here is an example:
 ```
 Wildtype_S1	WT	WT_1
 Wildtype_S2	WT	WT_2
 Knockout_S1	KO	KO_1
 Knockout_S2	KO	KO_2
 ```
- - **`Column_1`**: Contains the set of base names for each sample where `basename` ~ **basename**.fastq.gz. Please note that if you have paired-end data, you should only have one line in the `groups.tab` file for each sample.
- - **`Column_2`**: Contains group information for each sample. This sample metadata is used for coloring plots and for defining groups of samples in differential expression analysis
- - **`Column_3`**: Contains label information for each sample. This metadata is used for creating an alias for each sample. The information in this column is used to create abbreviated sample names (or labels) when figures are generated.
+
+!!! Example "Description of each `groups.tab` column"
+
+    === "Column 1: Basenames"
+
+        Contains the basename for each sample.
+
+        A basename is the raw data's filename without the following extensions: `.R1.fastq.gz`, `.R2.fastq.gz`. If you have paired-end data, you should only have one line in the `groups.tab` file for each sample.
+
+        _Pattern_: ==basename==.R{1,2}.fastq.gz
+
+        _Example_:  
+        **Input:** A paired-end sample has the following raw data filenames:
+
+        ```bash
+        $ ls
+
+        > WT_rep_1.R1.fastq.gz  WT_rep_1.R2.fastq.gz
+        ```   
+
+        **Output:** Given the following raw data filenames, the basename would be:
+
+        * `WT_rep_1`
+
+
+    === "Column 2: Groups"
+
+        Contains group information for each sample.
+
+        This information is used for coloring plots and for defining groups of samples in differential expression analysis.
+
+        _Example_:  
+        **Input:** A group of samples have the following raw data filenames:
+
+        ```bash
+        $ ls
+
+        > WT_rep_1.R1.fastq.gz  WT_rep_1.R2.fastq.gz WT_rep_2.R1.fastq.gz  WT_rep_2.R2.fastq.gz
+        ```   
+
+        **Output:** Given the following raw data filenames, the group name might be:
+
+        * `Wildtype`
+
+
+
+    === "Column 3: Labels"
+
+        Contains label information for each sample.
+
+        This field is used for creating an alias for each sample. The information in this column is used to create abbreviated sample names (or labels) when figures are generated.
+
+        _Example_:  
+        **Input:** A group of samples have the following raw data filenames:
+
+        ```bash
+        $ ls
+
+        > WT_rep_1.R1.fastq.gz  WT_rep_1.R2.fastq.gz WT_rep_2.R1.fastq.gz  WT_rep_2.R2.fastq.gz
+        ```   
+
+        **Output:** Given the following raw data filenames, the labels might be:
+
+        ```bash
+        WT_1
+        WT_2
+        ```
 
 **Creating a `groups.tab` file** is easy! You can use your text editor of choice to create the file.
 
