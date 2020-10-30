@@ -83,11 +83,11 @@ nav:
   - About: about.md
   - Getting started:
     - Users:
-      - Prerequisites: dev/lorem_ipsum.md
-      - Installation: dev/lorem_ipsum.md
+      - Prerequisites: dev/coming-soon.md
+      - Installation: dev/coming-soon.md
     - Developers:
-      - Installation: dev/lorem_ipsum.md
-      - Customization: dev/lorem_ipsum.md
+      - Installation: dev/coming-soon.md
+      - Customization: dev/coming-soon.md
   - Pipelines:
     - ChIP-seq:
       - User Tutorial: ChIP-seq/ChIP-seq.md
@@ -111,7 +111,7 @@ nav:
       - Resources: scRNA-seq/scRNASeq-Tools-and-Versions.md
   - FAQ:
     - Troubleshooting: troubleshooting.md
-    - Data Privacy: dev/lorem_ipsum.md
+    - Data Privacy: dev/coming-soon.md
   - Contribute: community-and-contribution.md
   - Changelog: changelog.md
   - Contact: contact-us.md 
