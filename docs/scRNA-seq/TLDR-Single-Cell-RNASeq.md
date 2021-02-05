@@ -1,18 +1,40 @@
 ## Setup
+In the rawData directory for the project, create a directory titled “h5”. Navigate to the directory and create softlinks for the h5 files (absolute file path is generally helpful). From inside the directory, this can be done for each file with the command:  
+```ln -s absolute/path/to/sample/outs/filtered_feature_bc_matrix.h5 renamed_sample.h5```
 
-In the rawData directory for the project, create a directory titled “h5”. Navigate to the directory and create softlinks for the h5 files (absolute file path is generally helpful). 
+If there are too many samples to repeatedly type this command, a bash script can be generated and run to create the softlinked files (assuming that these paths are generated from CellRanger outputs):
+```
+echo '#!/bin/bash' > make_softlinks.bash;
+for file in /path/to/experiment/*/outs/filtered_feature_bc_matrix.h5; do
+    sample=$(echo $file|sed "s~.*experiment/~~g"|sed "s~/outs.*~~g");
+	echo ln -s $file "$sample".h5;
+	done >> make_softlinks.bash
+```
+Run the bash script with:  
+```bash make_softlinks.bash```
+
+The `h5` directory should now contain softlinks for all the h5 files, pointing to their "true" location. This can be checked with the `ls -lh` command from inside the `h5` directory.  
+```
+lrwxrwxrwx. 1 user Group  16 Jul  2  2020 sample1_NR.h5 -> /path/to/sample1_NR/outs/filtered_feature_bc_matrix.h5
+lrwxrwxrwx. 1 user Group  15 Jul  2  2020 sample1_R.h5 -> /path/to/sample1_R/outs/filtered_feature_bc_matrix.h5
+lrwxrwxrwx. 1 user Group  16 Jul  2  2020 sample2_NR.h5 -> /path/to/sample2_NR/outs/filtered_feature_bc_matrix.h5
+lrwxrwxrwx. 1 user Group  15 Jul  2  2020 sample2_R.h5 -> /path/to/sample2_R/outs/filtered_feature_bc_matrix.h5
+```
 
 In the GUI, follow the standard usage to select the scRNASeq pipeline and an organism genome of interest. Current supported genomes are GRCh38 (human) and mm10 (mouse).
 ![scrnaSeq_GUI_launch](images/scRNASeq_GUI.png)
 
-Set the data directory the parent directory <ins>**containing**</ins> the h5 directory, <ins>**not**</ins> the h5 directory directly.  Create the working directory as normal and “Initialize Directory”. If set up properly, symlinks to the h5 files should be created within the working directory.
+Set the data directory the parent directory <ins>**containing**</ins> the `h5` directory, <ins>**not**</ins> the `h5` directory directly. You should see the `h5` directory in the selection window:  
+![scrnaSeq_rawdata_h5](images/scRNASeq_h5_dir.png)
 
-### Initial Quality Control
+ Create the working directory as normal and “Initialize Directory”. If set up properly, symlinks to the h5 files should be created within the working directory.
+ 
+## Initial Quality Control
 
 #### Clustering
-The clustering algorithm can be chosen from one of three options:
-1. Smart Local Moving Algorithm (default)
-2. Original Louvain algorithm
+The clustering algorithm can be chosen from one of three options:  
+1. Smart Local Moving Algorithm (default)  
+2. Original Louvain algorithm  
 3. Louvain algorithm with multilevel refinement
 
 Multiple clustering resolutions can be used, ranging from 0 to 2, where lower resolution values will result in larger and fewer clusters. The default values of 0.4, 0.6, 0.8, 1.0, and 1.2 should cover the majority of clustering resolutions necessary. 
@@ -62,14 +84,14 @@ Group2    Group1
 #### CITESeq
 CITESeq is a recent addition to single-cell technologies where antibody capture is used in conjunction with scRNASeq. This allows for more direct correlation to traditional cell sorting techniques, where surface markers are used to identify cells. By selecting this option, it retrieves the CITESeq data from the h5 object and performs relevant scaling and normalization, per [Seurat recommendations](https://satijalab.org/seurat/v3.1/multimodal_vignette.html).
 
-### Dry run the Pipeline
+## Dry run the Pipeline
 After setting up the data directory, the working directory, the groups.tab file, the contrasts.tab file, and all necessary options, click the `Dry Run` button. This will launch a preliminary pipeline check to ensure that all necessary files are present and accessible. A new window will open showing the steps that will be run in the pipeline. Scroll to the end of the dry run to confirm that the process names and number of processes run are identical at the beginning and end.
 
 |Top of Dry Run|End of Dry Run|
 |--------------|--------------|
 |![scRNASeq_Dry_Run1](images/scrnaseq_dryRun1.png) |![scRNASeq_Dry_Run2](images/scrnaseq_dryRun2.png)|
 
-### Run the scRNASeq Pipeline
+## Run the scRNASeq Pipeline
 
 If the dry run checks out, click the `Run` button. This produces the following popup:
 
