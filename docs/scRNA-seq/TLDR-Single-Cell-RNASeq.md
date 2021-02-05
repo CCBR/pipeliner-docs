@@ -21,7 +21,7 @@ lrwxrwxrwx. 1 user Group  16 Jul  2  2020 sample2_NR.h5 -> /path/to/sample2_NR/o
 lrwxrwxrwx. 1 user Group  15 Jul  2  2020 sample2_R.h5 -> /path/to/sample2_R/outs/filtered_feature_bc_matrix.h5
 ```
 
-In the GUI, follow the standard usage to select the scRNASeq pipeline and an organism genome of interest. Current supported genomes are GRCh38 (human) and mm10 (mouse).
+In the GUI, follow the standard usage to select the scRNASeq pipeline and an organism genome of interest. Current supported genomes are GRCh38 (human) and mm10 (mouse).  
 ![scrnaSeq_GUI_launch](images/scRNASeq_GUI.png)
 
 Set the data directory the parent directory <ins>**containing**</ins> the `h5` directory, <ins>**not**</ins> the `h5` directory directly. You should see the `h5` directory in the selection window:  
