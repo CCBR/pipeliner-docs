@@ -11,6 +11,5 @@ Both the WES and WGS pipelines can be run in `germline`, `tumor only`, or `tumor
 ![Whole genome/exome pipelines](images/Pipeliner_WES_WGS_Workflow.svg) <sup>**Fig 1. An Overview of the Whole Genome/Exome Pipelines.**
 
 
-For detailed descriptions of the individual tools outlined in the WES workflows, refer to the specific tool's documentation and web sites (tools are listed here).
+For detailed descriptions of the individual tools outlined in the WES workflows, refer to the specific tool's documentation and web sites (tools are listed [here](../Whole-exome-genome-tools-and-versions)).
 
-### Initial QC

@@ -8,7 +8,7 @@ From the "*Pipeline Family*" dropdown menu, select `exomeseq` or `genomeseq`, de
 Currently only `hg19`, `hg38`, and `mm10` are supported.
 
 <p float="left" align="center">
-  <img src="images/screenshots/genome_dropdown.png" align="top" width="50%" height="50%"/>
+  <img src="images/genome_dropdown.png" align="top" width="50%" height="50%"/>
 </p>
 
 
@@ -22,7 +22,7 @@ The RNA-Seq documentation has a handy table of rules for [naming raw data files]
 
 Here's an example of what the GUI should look like when filled out:
 <p float="left" align="center">
-  <img src="images/screenshots/example_filled.png" align="top" width="50%" height="50%"/>
+  <img src="images/example_filled.png" align="top" width="50%" height="50%"/>
 </p>
 
 ## Run `Intial QC`
@@ -31,26 +31,26 @@ For all exome and genome pipelines, workflows consist of 2 stages: Initial QC an
 - When first running the Initial QC pipeline, click on the "*Initialize Directory*" button.
 - For EXOME analysis, you must provide the full path to the exome targets bed file in the area highlighted below.  Please check with the sequencing facility or the manufacturer of the exome capture kit for this file.
 <p float="left" align="center">
-  <img src="images/screenshots/exome_targets.png" align="top" width="50%" height="50%"/>
+  <img src="images/exome_targets.png" align="top" width="50%" height="50%"/>
 </p>
 - If there are no errors, click on the "*Dry Run*" button.  This may take several minutes if you have a large number of input files.
 - Inspect the Dry Run output.  It should show a tally of the rules that will be executed and details of each step for each file, like this:
 <p float="left" align="center">
-  <img src="images/screenshots/initial_qc_dryrun.png" align="top" width="50%" height="50%"/>
+  <img src="images/initial_qc_dryrun.png" align="top" width="50%" height="50%"/>
 </p>
 
 
 ## Run variant calling
 Pipeliner supports three types of variant calling: `Germline`, `Somatic Tumor-Normal`, or `Somatic Tumor-only`.
 <p float="left" align="center">
-  <img src="images/screenshots/pipeline_dropdown.png" align="top" width="50%" height="50%"/>
+  <img src="images/pipeline_dropdown.png" align="top" width="50%" height="50%"/>
 </p>
 
 Once `Initial QC` is completed, setup the Pipeliner options exactly as before, and in the Pipeline dropdown, select one of the variant calling pipelines.
 
 For the `tumor-normal` pipeline, the sample pairing must be specified for each pair in the area highlighted below.
 <p float="left" align="center">
-  <img src="images/screenshots/tumor_normal_pairs.png" align="top" width="50%" height="50%"/>
+  <img src="images/tumor_normal_pairs.png" align="top" width="50%" height="50%"/>
 </p>
 
 When you specify 'Somatic Tumor-Normal' in the Pipeline dropdown menu of the Options box, a 'Pairs' text input area will appear (marked in red above). Inside that window, you can write in the pairs, with each pair on a separate line, the normal sample in the first column, the tumor sample in the second column, and with a tab separating the columns.
