@@ -109,6 +109,11 @@ nav:
       - User Tutorial: scRNA-seq/TLDR-Single-Cell-RNASeq.md
       - Output Files: scRNA-seq/scRNASeq-Output-Files.md
       - Resources: scRNA-seq/scRNASeq-Tools-and-Versions.md
+    - WES/WGS:
+      - Overview: WEG-seq/Whole-exome-genome-overview.md
+      - User Tutorial: WEG-seq/TLDR-WEG-seq.md
+      - Output Files: WEG-seq/Whole-exome-genome-output.md
+      - Resources: WEG-seq/Whole-exome-genome-tools-and-versions.md
   - FAQ:
     - Troubleshooting: troubleshooting.md
     - Data Privacy: dev/coming-soon.md
