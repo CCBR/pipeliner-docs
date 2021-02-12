@@ -449,11 +449,11 @@ Successful completion of Phase 2 of the ChIPseq tutorial demo data will create t
 
 [FRiP](https://www.encodeproject.org/data-standards/terms/) and [jaccard](https://bedtools.readthedocs.io/en/latest/content/tools/jaccard.html) barplots/scatterplots/table are saved in the `PeakQC` folder for each of the peak callers:
 
-* gem
-* macs
-  * broad
-  * narrow
-* sicer
+* gem  
+* macs  
+    - broad    
+    - narrow  
+* sicer  
 
 ```bash
 <working_dir>
@@ -504,8 +504,8 @@ The above files allow you to make inter-sample comparison for a peak caller at a
 
 * sicer
 * macs2
-  * broad
-  * narrow
+    - broad
+    - narrow
 
 Please note that IDR is not run for GEM.
 
@@ -544,46 +544,6 @@ Please note that IDR is not run for GEM.
 │       └── MEF_p20
 │           ├── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt
 │           └── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt.png
-```
-
-#### MultiQC Report
-
-Along with some other housekeeping files the `Reports` folder contains the `multiqc_report.html` which graphically aggregates all peak based QC assestments into one report. Also, the mulitqc report previously generated for the *initialQC* (phase1) of the pipeline is now located in the `multiqc_initialQC` subfolder as showed below: 
-
-```bash
-<working_dir>
-│ 
-│ 
-├── Reports
-│   ├── multiqc_data
-│   │   ├── multiqc_bcbio_metrics.txt
-│   │   ├── multiqc_chip-specific_qc_metrics.txt
-│   │   ├── multiqc_data.json
-│   │   ├── multiqc_fastqc.txt
-│   │   ├── multiqc_fastq_screen.txt
-│   │   ├── multiqc_general_stats.txt
-│   │   ├── multiqc.log
-│   │   ├── multiqc_samtools_flagstat.txt
-│   │   ├── multiqc_samtools_idxstats.txt
-│   │   ├── multiqc_sources.txt
-│   │   ├── seqbuster_isomirs.txt
-│   │   └── seqbuster_mirs.txt
-│   ├── multiqc_initialQC
-│   │   ├── multiqc_data
-│   │   │   ├── multiqc_bcbio_metrics.txt
-│   │   │   ├── multiqc_chip-specific_qc_metrics.txt
-│   │   │   ├── multiqc_data.json
-│   │   │   ├── multiqc_fastqc.txt
-│   │   │   ├── multiqc_fastq_screen.txt
-│   │   │   ├── multiqc_general_stats.txt
-│   │   │   ├── multiqc.log
-│   │   │   ├── multiqc_samtools_flagstat.txt
-│   │   │   ├── multiqc_samtools_idxstats.txt
-│   │   │   ├── multiqc_sources.txt
-│   │   │   ├── seqbuster_isomirs.txt
-│   │   │   └── seqbuster_mirs.txt
-│   │   └── multiqc_report.html
-│   ├── multiqc_report.html
 ```
 
 ### Peak annotations with UROPA
