@@ -12,6 +12,7 @@ site_description: >-
 # Repository
 repo_name: CCBR/Pipeliner
 repo_url: https://github.com/CCBR/Pipeliner
+edit_uri: https://github.com/CCBR/pipeliner-docs/edit/master/docs/
 
 # Copyright
 copyright: Copyright &copy; 2020 CCBR
