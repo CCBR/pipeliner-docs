@@ -19,7 +19,7 @@ After re-logging into Biowulf with `-Y`, we can check if enabling X11 solved the
 
 If you are still receiving error messages, this is an indication that you do not have X-windows software installed on your local machine.  Here are instruction to install an X11 client.
 
-!!! Install-X11 "Install X11 client"
+!!! tldr "Install X11 client"
 
     === "macOS"
 
@@ -61,7 +61,7 @@ If you are still receiving error messages, this is an indication that you do not
 **A.** There are several different ways of checking the status of each job submitted to the cluster.  
 Here are a few suggestions:
 
-!!! Job-status "Check Job Status"
+!!! tldr "Check Job Status"
 
     === "HPC Dashboard"
 
@@ -77,12 +77,12 @@ Here are a few suggestions:
         ```bash
         tail -n30 Reports/snakemake.log
         ```
-        
+
         Or more specifically, you can pull out the timestamps of the last few completed jobs like this:
         ```bash
         grep -A 1 done Reports/snakemake.log | tail
         ```
-        
+
 
     === "Query Job Scheduler"
 
@@ -103,10 +103,10 @@ Here are a few suggestions:
 
 **Q. How do I identify failed jobs?**
 
-**A.** If there are errors, you'll need to identify which jobs failed and check its corresponding SLURM output file. 
+**A.** If there are errors, you'll need to identify which jobs failed and check its corresponding SLURM output file.
 The SLURM output file may contain a clue as to why the job failed.
 
-!!! Failed-jobs "Find Failed Jobs"
+!!! tldr "Find Failed Jobs"
 
     === "HPC Usage Table"
         Pipeliner gathers runtime statistics for each job submitted to the cluster.
@@ -142,32 +142,32 @@ Many failures are caused by filesystem or network issues on Biowulf, and in such
 
 To stop Pipeliner jobs that are currently running, you can follow these options.
 
-!!! Cancel-jobs "Cancel running jobs"
+!!! tldr "Cancel running jobs"
 
     === "Manual Inspection"
         You can use the `sjobs` tool [provided by Biowulf](https://hpc.nih.gov/docs/biowulf_tools.html#sjobs) to monitor ongoing jobs.
 
-        Examine the `NAME` column of the `sjobs` output, one of them should match what you entered as the 'Project Id' in the Pipeliner GUI. This is the "primary" job that coordinates secondary job submissions as steps are completed.
-        
+        Examine the `NAME` column of the `sjobs` output, one of them should match what you entered as the 'Project Id' in the [Project Information section](../RNA-seq/Gene-and-isoform-expression-guided-tutorial/#step-0-fill-out-the-project-information-section) of the Pipeliner GUI. This is the "primary" job that coordinates secondary job submissions as steps are completed. Terminating this job will ensure that the pipeline is cancelled; however, you will likely need to unlock the working directory before re-running Pipeliner again. Please see our instructions below in `Error: Directory cannot be locked` for how to unlock a working directory.
+
         You can [manually cancel](https://hpc.nih.gov/docs/userguide.html#delete) the primary job using `scancel`.
-        
-        However, secondary jobs that are already running will continue to completion (or failure).  To stop them immediately, you will need to run `scancel` individually for each secondary job. See the next tab for a bash script that tries to automate this.
+
+        However, secondary jobs that are already running will continue to completion (or failure).  To stop them immediately, you will need to run `scancel` individually for each secondary job. See the next tab for a bash script that tries to automate this process.
 
     === "Bash Script"
         When there are lots of secondary jobs running, or if you have multiple Pipeliner runs ongoing simultaneously, it's not feasible to manually cancel jobs based on the `sjobs` output (see previous tab).
-        
+
         We provide [a script](https://github.com/CCBR/Tools/blob/master/Biowulf/cancel_snakemake_jobs.sh) that will parse the snakemake log file and cancel all jobs listed within.
 
         ```bash
         ## Download the script (to the current directory)
         wget https://raw.githubusercontent.com/CCBR/Tools/master/Biowulf/cancel_snakemake_jobs.sh
-        
+
         ## Run the script
         bash cancel_snakemake_jobs.sh /path/to/snakemake.log
         ```
-        
+
         The script accepts one argument, which should be the path to the snakemake log file.  This will work for any log output from Snakemake version `5.1.3`.
-        
+
         This script will NOT cancel the primary job, which you will still have to identify and cancel manually, as described in the previous tab.
 
 Once you've ensured that all running jobs have been stopped, you need to unlock the working directory (see [below](https://pipeliner-docs.readthedocs.io/en/latest/troubleshooting/#job-errors)), and re-run Pipeliner to continue the workflow.
@@ -181,16 +181,16 @@ Once you've ensured that all running jobs have been stopped, you need to unlock 
 
 **Q. Why am I getting a message saying `Error: Directory cannot be locked. ...` when I do the dry-run?**
 
-**A.** This is caused when a run is stopped prematurely, either accidently or on purpose.  This can be remedied easily by running `snakemake --unlock`, but the version of snakemake needs to match what Pipeliner uses (which is no longer the default on Biowulf).
+**A.** This is caused when a run is stopped prematurely, either accidentally or on purpose, or the pipeline is still running in your working directory. Snakemake will lock a working directory to prevent two concurrent pipelines from writing to the same location. This can be remedied easily by running `snakemake --unlock`, but the version of snakemake needs to match what Pipeliner uses (which is no longer the default on Biowulf). Please check to see if the pipeline is still running prior to running the commands below. If you would like to cancel a submitted or running pipeline, please reference the instructions above.
 
 ```bash
-## Navigate to working directory
+# Navigate to working directory
 cd /path/to/working/dir
 
-## Load the right version of snakemake
+# Load the right version of snakemake
 modue load snakemake/5.1.3
 
-## Unlock
+# Unlock the working directory
 snakemake --unlock
 ```
 
