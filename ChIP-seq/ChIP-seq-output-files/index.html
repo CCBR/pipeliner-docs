@@ -1,0 +1,447 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Pipeliner is an open-source and scalable solution for analyzing  next-generation sequencing data. Pipeliner provides access to  the same best-practices NGS pipelines developed and benchmarked  by experts at CCBR and NCBR. This repository is the main source  of documentation for users and developers working with or  contributing to Pipeliner."><meta name=author content="Skyler Kuhn"><link rel="shortcut icon" href=../../assets/favicon/favicon.ico><meta name=generator content="mkdocs-1.1.2, mkdocs-material-5.5.2"><title>Output Files - Pipeliner Documentation</title><link rel=stylesheet href=../../assets/stylesheets/main.25b81cc6.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.80a78273.min.css><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary data-md-color-accent> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#phase-1-of-the-chip-seq-pipeline class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid" aria-label=Header> <a href=../.. title="Pipeliner Documentation" class="md-header-nav__button md-logo" aria-label="Pipeliner Documentation"> <img src=../../assets/icons/doc-book.svg alt=logo> </a> <label class="md-header-nav__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header-nav__title data-md-component=header-title> <div class=md-header-nav__ellipsis> <span class="md-header-nav__topic md-ellipsis"> Pipeliner Documentation </span> <span class="md-header-nav__topic md-ellipsis"> Output Files </span> </div> </div> <label class="md-header-nav__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query data-md-state=active> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <button type=reset class="md-search__icon md-icon" aria-label=Clear data-md-component=search-reset tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header-nav__source> <a href=https://github.com/CCBR/Pipeliner/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> CCBR/Pipeliner </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Pipeliner Documentation" class="md-nav__button md-logo" aria-label="Pipeliner Documentation"> <img src=../../assets/icons/doc-book.svg alt=logo> </a> Pipeliner Documentation </label> <div class=md-nav__source> <a href=https://github.com/CCBR/Pipeliner/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> CCBR/Pipeliner </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. title=Home class=md-nav__link> Home </a> </li> <li class=md-nav__item> <a href=../../about/ title=About class=md-nav__link> About </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3 type=checkbox id=nav-3> <label class=md-nav__link for=nav-3> Getting started <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label="Getting started" data-md-level=1> <label class=md-nav__title for=nav-3> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Getting started </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-1 type=checkbox id=nav-3-1> <label class=md-nav__link for=nav-3-1> Users <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Users data-md-level=2> <label class=md-nav__title for=nav-3-1> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Users </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../dev/coming-soon/ title=Prerequisites class=md-nav__link> Prerequisites </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ title=Installation class=md-nav__link> Installation </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-3-2 type=checkbox id=nav-3-2> <label class=md-nav__link for=nav-3-2> Developers <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Developers data-md-level=2> <label class=md-nav__title for=nav-3-2> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Developers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../dev/coming-soon/ title=Installation class=md-nav__link> Installation </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ title=Customization class=md-nav__link> Customization </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4 type=checkbox id=nav-4 checked> <label class=md-nav__link for=nav-4> Pipelines <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Pipelines data-md-level=1> <label class=md-nav__title for=nav-4> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Pipelines </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-1 type=checkbox id=nav-4-1 checked> <label class=md-nav__link for=nav-4-1> ChIP-seq <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=ChIP-seq data-md-level=2> <label class=md-nav__title for=nav-4-1> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> ChIP-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../ChIP-seq/ title="User Tutorial" class=md-nav__link> User Tutorial </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Output Files <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg> </span> </label> <a href=./ title="Output Files" class="md-nav__link md-nav__link--active"> Output Files </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#phase-1-of-the-chip-seq-pipeline class=md-nav__link> Phase 1 of the ChIP-seq pipeline </a> <nav class=md-nav aria-label="Phase 1 of the ChIP-seq pipeline"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#rawdata-files class=md-nav__link> Rawdata files </a> </li> <li class=md-nav__item> <a href=#sequencing-quality-and-contamination-assessments class=md-nav__link> Sequencing quality and contamination assessments: </a> <nav class=md-nav aria-label="Sequencing quality and contamination assessments:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fastqc class=md-nav__link> FastQC </a> </li> <li class=md-nav__item> <a href=#fastqscreen class=md-nav__link> FastQScreen </a> </li> <li class=md-nav__item> <a href=#krakenkrona class=md-nav__link> Kraken/Krona </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#chip-quality-and-replicate-concordance-assessments class=md-nav__link> ChIP quality and replicate concordance assessments </a> <nav class=md-nav aria-label="ChIP quality and replicate concordance assessments"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#deeptools-outputs class=md-nav__link> Deeptools outputs </a> </li> <li class=md-nav__item> <a href=#chip-seq-relevant-qc class=md-nav__link> ChIP-seq relevant QC </a> </li> <li class=md-nav__item> <a href=#multiqc-report class=md-nav__link> Multiqc report </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#alignment-and-visualization-files class=md-nav__link> Alignment and Visualization files: </a> <nav class=md-nav aria-label="Alignment and Visualization files:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#bams class=md-nav__link> Bams </a> </li> <li class=md-nav__item> <a href=#bigwigs class=md-nav__link> Bigwigs </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#other-important-files class=md-nav__link> Other important files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#phase-2-of-the-chip-seq-pipeline class=md-nav__link> Phase 2 of the ChIP-seq pipeline </a> <nav class=md-nav aria-label="Phase 2 of the ChIP-seq pipeline"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#peak-calls class=md-nav__link> Peak calls: </a> <nav class=md-nav aria-label="Peak calls:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gem class=md-nav__link> GEM </a> </li> <li class=md-nav__item> <a href=#macs2-for-broad-peaks class=md-nav__link> MACS2 for broad peaks </a> </li> <li class=md-nav__item> <a href=#macs2-for-narrow-peaks class=md-nav__link> MACS2 for narrow peaks </a> </li> <li class=md-nav__item> <a href=#sicer class=md-nav__link> Sicer </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#peaks-based-qc class=md-nav__link> Peaks-based QC </a> <nav class=md-nav aria-label="Peaks-based QC"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fripjaccard class=md-nav__link> FRiP/Jaccard </a> </li> <li class=md-nav__item> <a href=#replicate-concordance-with-idr class=md-nav__link> Replicate concordance with IDR </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#peak-annotations-with-uropa class=md-nav__link> Peak annotations with UROPA </a> </li> <li class=md-nav__item> <a href=#motif-analysis-with-homer class=md-nav__link> Motif analysis with HOMER </a> </li> <li class=md-nav__item> <a href=#diffbind-results-optional class=md-nav__link> DiffBind results (Optional) </a> </li> <li class=md-nav__item> <a href=#other-important-files_1 class=md-nav__link> Other important files </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../ChIP-seq-tools/ title=Resources class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-2 type=checkbox id=nav-4-2> <label class=md-nav__link for=nav-4-2> RNA-seq <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=RNA-seq data-md-level=2> <label class=md-nav__title for=nav-4-2> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> RNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../RNA-seq/Theory-and-practical-guide-for-RNA-seq/ title=Theory class=md-nav__link> Theory </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Gene-and-isoform-expression-overview/ title=Overview class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/TLDR-RNA-seq/ title="Quick Start" class=md-nav__link> Quick Start </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Gene-and-isoform-expression-guided-tutorial/ title="User Tutorial" class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Differential-expression-pipeline-tools-and-versions/ title=Resources class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-3 type=checkbox id=nav-4-3> <label class=md-nav__link for=nav-4-3> miRNA-seq <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=miRNA-seq data-md-level=2> <label class=md-nav__title for=nav-4-3> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> miRNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../miRNA-seq/overview-miRNA-seq/ title=Overview class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../miRNA-seq/TLDR-miRNASeq/ title="User Tutorial" class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../miRNA-seq/miRSeq-Output-Files/ title="Output Files" class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../miRNA-seq/miRSeq-Tools-and-Versions/ title=Resources class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-4 type=checkbox id=nav-4-4> <label class=md-nav__link for=nav-4-4> scRNA-seq <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=scRNA-seq data-md-level=2> <label class=md-nav__title for=nav-4-4> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> scRNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../scRNA-seq/overview-scRNA-seq/ title=Overview class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/TLDR-Single-Cell-RNASeq/ title="User Tutorial" class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/scRNASeq-Output-Files/ title="Output Files" class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/scRNASeq-Tools-and-Versions/ title=Resources class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4-5 type=checkbox id=nav-4-5> <label class=md-nav__link for=nav-4-5> WES/WGS <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=WES/WGS data-md-level=2> <label class=md-nav__title for=nav-4-5> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> WES/WGS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-overview/ title=Overview class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/TLDR-WEG-seq/ title="User Tutorial" class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-output/ title="Output Files" class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-tools-and-versions/ title=Resources class=md-nav__link> Resources </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> FAQ <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=FAQ data-md-level=1> <label class=md-nav__title for=nav-5> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> FAQ </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../troubleshooting/ title=Troubleshooting class=md-nav__link> Troubleshooting </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ title="Data Privacy" class=md-nav__link> Data Privacy </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../community-and-contribution/ title=Contribute class=md-nav__link> Contribute </a> </li> <li class=md-nav__item> <a href=../../changelog/ title=Changelog class=md-nav__link> Changelog </a> </li> <li class=md-nav__item> <a href=../../contact-us/ title=Contact class=md-nav__link> Contact </a> </li> <li class=md-nav__item> <a href=../../license/ title=License class=md-nav__link> License </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#phase-1-of-the-chip-seq-pipeline class=md-nav__link> Phase 1 of the ChIP-seq pipeline </a> <nav class=md-nav aria-label="Phase 1 of the ChIP-seq pipeline"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#rawdata-files class=md-nav__link> Rawdata files </a> </li> <li class=md-nav__item> <a href=#sequencing-quality-and-contamination-assessments class=md-nav__link> Sequencing quality and contamination assessments: </a> <nav class=md-nav aria-label="Sequencing quality and contamination assessments:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fastqc class=md-nav__link> FastQC </a> </li> <li class=md-nav__item> <a href=#fastqscreen class=md-nav__link> FastQScreen </a> </li> <li class=md-nav__item> <a href=#krakenkrona class=md-nav__link> Kraken/Krona </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#chip-quality-and-replicate-concordance-assessments class=md-nav__link> ChIP quality and replicate concordance assessments </a> <nav class=md-nav aria-label="ChIP quality and replicate concordance assessments"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#deeptools-outputs class=md-nav__link> Deeptools outputs </a> </li> <li class=md-nav__item> <a href=#chip-seq-relevant-qc class=md-nav__link> ChIP-seq relevant QC </a> </li> <li class=md-nav__item> <a href=#multiqc-report class=md-nav__link> Multiqc report </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#alignment-and-visualization-files class=md-nav__link> Alignment and Visualization files: </a> <nav class=md-nav aria-label="Alignment and Visualization files:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#bams class=md-nav__link> Bams </a> </li> <li class=md-nav__item> <a href=#bigwigs class=md-nav__link> Bigwigs </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#other-important-files class=md-nav__link> Other important files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#phase-2-of-the-chip-seq-pipeline class=md-nav__link> Phase 2 of the ChIP-seq pipeline </a> <nav class=md-nav aria-label="Phase 2 of the ChIP-seq pipeline"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#peak-calls class=md-nav__link> Peak calls: </a> <nav class=md-nav aria-label="Peak calls:"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gem class=md-nav__link> GEM </a> </li> <li class=md-nav__item> <a href=#macs2-for-broad-peaks class=md-nav__link> MACS2 for broad peaks </a> </li> <li class=md-nav__item> <a href=#macs2-for-narrow-peaks class=md-nav__link> MACS2 for narrow peaks </a> </li> <li class=md-nav__item> <a href=#sicer class=md-nav__link> Sicer </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#peaks-based-qc class=md-nav__link> Peaks-based QC </a> <nav class=md-nav aria-label="Peaks-based QC"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fripjaccard class=md-nav__link> FRiP/Jaccard </a> </li> <li class=md-nav__item> <a href=#replicate-concordance-with-idr class=md-nav__link> Replicate concordance with IDR </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#peak-annotations-with-uropa class=md-nav__link> Peak annotations with UROPA </a> </li> <li class=md-nav__item> <a href=#motif-analysis-with-homer class=md-nav__link> Motif analysis with HOMER </a> </li> <li class=md-nav__item> <a href=#diffbind-results-optional class=md-nav__link> DiffBind results (Optional) </a> </li> <li class=md-nav__item> <a href=#other-important-files_1 class=md-nav__link> Other important files </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/CCBR/pipeliner-docs/edit/master/docs/ChIP-seq/ChIP-seq-output-files.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> </a> <h1>Output Files</h1> <h2 id=phase-1-of-the-chip-seq-pipeline>Phase 1 of the ChIP-seq pipeline<a class=headerlink href=#phase-1-of-the-chip-seq-pipeline title="Permanent link">&para;</a></h2> <p>Successful completion of Phase 1 of the ChIPseq tutorial demo data will create the following file/folder structure:</p> <h3 id=rawdata-files>Rawdata files<a class=headerlink href=#rawdata-files title="Permanent link">&para;</a></h3> <p>Symlinks to the raw fastq files:</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── CTCF_ChIP_macrophage_p20_1.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/chipseq//SRR3081748_1.fastq.gz
+├── CTCF_ChIP_macrophage_p20_2.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/chipseq//SRR3081749_1.fastq.gz
+├── ...
+├── ...
+</code></pre></div> <h3 id=sequencing-quality-and-contamination-assessments>Sequencing quality and contamination assessments:<a class=headerlink href=#sequencing-quality-and-contamination-assessments title="Permanent link">&para;</a></h3> <h4 id=fastqc>FastQC<a class=headerlink href=#fastqc title="Permanent link">&para;</a></h4> <p><code>rawfastqc</code> and <code>fastqc</code> folders contains sequencing quality assessment results using <a href=https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ >fastqc</a> for raw and preprocess fastq files. Each file has a <em>.zip</em> archive and a <em>.html</em> report. These results are also summarized across samples in the <em>multiqc_report.html</em> file.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│
+├── rawfastQC
+│   ├── CTCF_ChIP_macrophage_p20_1.R1_fastqc.html
+│   ├── CTCF_ChIP_macrophage_p20_1.R1_fastqc.zip
+│   ├── ...
+│   ├── ...
+├── fastQC
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_fastqc.html
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_fastqc.zip
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h4 id=fastqscreen>FastQScreen<a class=headerlink href=#fastqscreen title="Permanent link">&para;</a></h4> <p>1 million reads from each sample are screened against the following database using <a href=https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/ >Fastqscreen</a>:</p> <ul> <li>Human</li> <li>Mouse</li> <li>Bacteria</li> <li>Fungi</li> <li>Viruses</li> <li><a href=https://www.ncbi.nlm.nih.gov/tools/vecscreen/univec/ >UniVec</a></li> <li>Ribosomal sequences</li> </ul> <p>The results are saved in the <code>FQscreen</code> and <code>FQscreen2</code> folders. You can expect 6 files per sample as shown the example below:</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── FQscreen
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.html
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.png
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.txt
+│   ├── ...
+│   ├── ...
+├── FQscreen2
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.html
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.png
+│   ├── CTCF_ChIP_macrophage_p20_1.R1.trim_screen.txt
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h4 id=krakenkrona>Kraken/Krona<a class=headerlink href=#krakenkrona title="Permanent link">&para;</a></h4> <p><a href=https://ccb.jhu.edu/software/kraken/ >Kraken</a> provides a k-mer based approach which assigns each read to a bacterial reference in an "all known bacterial species" database. These are reported in the <code>*.taxa.txt</code> files per sample. These assignments can then be interactively visualized in a html file using <a href=https://github.com/marbl/Krona/wiki>Krona</a>.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── kraken
+│   ├── CTCF_ChIP_macrophage_p20_1.trim.fastq.kraken_bacteria.krona.html
+│   ├── CTCF_ChIP_macrophage_p20_1.trim.fastq.kraken_bacteria.taxa.txt
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h3 id=chip-quality-and-replicate-concordance-assessments>ChIP quality and replicate concordance assessments<a class=headerlink href=#chip-quality-and-replicate-concordance-assessments title="Permanent link">&para;</a></h3> <h4 id=deeptools-outputs>Deeptools outputs<a class=headerlink href=#deeptools-outputs title="Permanent link">&para;</a></h4> <p>deeptools` folder has the following set of files for each group (a group includes all replicates for that group including input samples):</p> <ul> <li><a href="https://deeptools.readthedocs.io/en/develop/content/tools/plotFingerprint.html?highlight=fingerprint#background">fingerprint</a> plot related files:</li> <li><code>fingerprint.metrics.Q5DD.tsv</code>: fingerprint plot stats</li> <li><code>fingerprint.Q5DD.pdf</code>: fingerprint plot with Q5DD data</li> <li><code>fingerprint.sorted.pdf</code>: fingerprint plot with unfiltered data</li> <li><a href=https://deeptools.readthedocs.io/en/develop/content/tools/plotHeatmap.html>heatmap and profile</a> plots focused on various genomic loci:</li> <li><em>metagene</em>: all genes in the genome normalized by gene length</li> <li><em>prot.metagene</em>: same as above but focused on protein-coding genes only</li> <li><em>TSS</em>: around transcription start sites of all genes</li> <li><em>prot.TSS</em>: same as above but focused on protein-coding genes only</li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── deeptools
+│   ├── Macrophage_p20.fingerprint.metrics.Q5DD.tsv
+│   ├── Macrophage_p20.fingerprint.Q5DD.pdf
+│   ├── Macrophage_p20.fingerprint.sorted.pdf
+│   ├── Macrophage_p20.metagene_heatmap.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.metagene_heatmap.sorted.RPGC.pdf
+│   ├── Macrophage_p20.metagene_profile.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.metagene_profile.sorted.RPGC.pdf
+│   ├── Macrophage_p20.prot.metagene_heatmap.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.prot.metagene_heatmap.sorted.RPGC.pdf
+│   ├── Macrophage_p20.prot.metagene_profile.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.prot.metagene_profile.sorted.RPGC.pdf
+│   ├── Macrophage_p20.prot.TSS_heatmap.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.prot.TSS_heatmap.sorted.RPGC.pdf
+│   ├── Macrophage_p20.prot.TSS_profile.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.prot.TSS_profile.sorted.RPGC.pdf
+│   ├── Macrophage_p20.TSS_heatmap.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.TSS_heatmap.sorted.RPGC.pdf
+│   ├── Macrophage_p20.TSS_profile.Q5DD.RPGC.pdf
+│   ├── Macrophage_p20.TSS_profile.sorted.RPGC.pdf
+│   ├── ...
+│   ├── ...
+</code></pre></div> <p><code>deeptools</code> folder <code>sorted_fingerprint</code> subfolder with fingerprint stats for unfiltered bam files.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── deeptools
+│   ├── sorted_fingerprint
+│   │   ├── Macrophage_p20.fingerprint.metrics.sorted.tsv
+│   │   ├── Macrophage_p3.fingerprint.metrics.sorted.tsv
+│   │   └── MEF_p20.fingerprint.metrics.sorted.tsv
+</code></pre></div> <p><code>deeptools</code> folder contains principle component analysis plots with all samples.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── deeptools
+│   ├── pca.Q5DD.RPGC.pdf
+│   ├── pca.sorted.RPGC.pdf
+</code></pre></div> <p><code>deeptools</code> folder also contain spearman correlation plots (heatmaps and scatterplots) with all samples</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── deeptools
+│   ├── spearman_heatmap.Q5DD.RPGC_mqc.png
+│   ├── spearman_heatmap.Q5DD.RPGC.pdf
+│   ├── spearman_heatmap.sorted.RPGC.pdf
+│   ├── spearman_scatterplot.Q5DD.RPGC.pdf
+│   └── spearman_scatterplot.sorted.RPGC.pdf
+</code></pre></div> <h4 id=chip-seq-relevant-qc>ChIP-seq relevant QC<a class=headerlink href=#chip-seq-relevant-qc title="Permanent link">&para;</a></h4> <p><code>QC</code> folder contains more ChIP-seq relevant qc metrics. For eg. </p> <ul> <li>Preseq is used to assess library complexity. </li> <li>NGSQC is used to compare ChIP quality between replicates/samples. These results are also summarized per group.</li> </ul> <p><em>QCTable.txt</em> neatly aggregrates all the QC metrics into a single tab-delimited file which can be easily read into Microsoft Excel.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│
+├── QC
+│   ├── CTCF_ChIP_macrophage_p20_1.ccurve
+│   ├── CTCF_ChIP_macrophage_p20_1.preseq.dat
+│   ├── CTCF_ChIP_macrophage_p20_1.preseq.log
+│   ├── ...
+│   ├── ...
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.NGSQC_report.txt
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.NGSQC.txt
+│   ├── ...
+│   ├── ...
+│   ├── Macrophage_p20.NGSQC.Q5DD.png
+│   ├── ...
+│   ├── ...
+│   └── QCTable.txt
+</code></pre></div> <h4 id=multiqc-report>Multiqc report<a class=headerlink href=#multiqc-report title="Permanent link">&para;</a></h4> <p>Along with some other housekeeping files the <code>Reports</code> folder contains the <code>multiqc_report.html</code> which graphically aggregates all QC assestments into one report.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│
+├── Reports
+│   ├── ...
+│   ├── ...
+│   ├── multiqc_data
+│   │   ├── multiqc_bcbio_metrics.txt
+│   │   ├── multiqc_chip-specific_qc_metrics.txt
+│   │   ├── multiqc_data.json
+│   │   ├── multiqc_fastqc.txt
+│   │   ├── multiqc_fastq_screen.txt
+│   │   ├── multiqc_general_stats.txt
+│   │   ├── multiqc.log
+│   │   ├── multiqc_samtools_flagstat.txt
+│   │   ├── multiqc_samtools_idxstats.txt
+│   │   ├── multiqc_sources.txt
+│   │   ├── seqbuster_isomirs.txt
+│   │   └── seqbuster_mirs.txt
+│   ├── multiqc_report.html
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h3 id=alignment-and-visualization-files>Alignment and Visualization files:<a class=headerlink href=#alignment-and-visualization-files title="Permanent link">&para;</a></h3> <h4 id=bams>Bams<a class=headerlink href=#bams title="Permanent link">&para;</a></h4> <p><code>bam</code> folder has following files for each sample:</p> <ul> <li><code>.bam</code>: binary version of the alignment file. There are 3 versions of alignment files:</li> <li><code>sorted.bam</code>: all alignments sorted by coordinates</li> <li><code>Q5.bam</code>: sorted alignments filtered to exclude alignments with MAPQ&lt;5</li> <li><code>Q5DD.bam</code>: deduplicated version of the <code>Q5.bam</code> file</li> <li>Each of the <code>.bam</code> files may also have the following secondary files:</li> <li><code>.bai</code>: index for the <code>.bam</code> file</li> <li><code>.flagstat</code>: file containing the alignment statistics</li> <li><code>.idxstat</code>: file containing number of reads aligning per chromosome</li> <li><code>.ppqt</code>: cross-correlation statistics</li> <li><code>.pdf</code>: cross-correlation plots<ul> <li><code>.tagAlign.gz</code>: alignments in bed format for downstream peak calling by MACS2</li> </ul> </li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── bam
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5.bam.bai
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5.bam.flagstat
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5.bam.idxstat
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.bam
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.bam.bai
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.bam.flagstat
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.bam.idxstat
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.pdf
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.ppqt
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.tagAlign.gz
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.bam
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.bam.bai
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.bam.flagstat
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.bam.idxstat
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.pdf
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.ppqt
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h4 id=bigwigs>Bigwigs<a class=headerlink href=#bigwigs title="Permanent link">&para;</a></h4> <p><code>.bigwig</code> folder contains alignments in <a href=https://genome.ucsc.edu/goldenpath/help/bigWig.html>bigwig</a> format which is smaller than bam format and easy for quick visualizations using genome browsers like <a href=https://software.broadinstitute.org/software/igv/ >IGV</a>. Each sample has 3 bigwig files:</p> <ul> <li><code>.sorted.RPGC.bw</code>: created by normalizing the corresponding <code>.sorted.bam</code> file to 1X genome coverage</li> <li><code>.Q5DD.RPGC.bw</code>: created by normalizing the corresponding <code>.Q5DD.bam</code> file to 1X genome coverage</li> <li><code>.Q5DD.RPGC.inputnorm.bw</code>: created by subtracting the normalized input bigwig file from the normalized ChIP bigwig</li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── bigwig
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.RPGC.bw
+│   ├── CTCF_ChIP_macrophage_p20_1.Q5DD.RPGC.inputnorm.bw
+│   ├── CTCF_ChIP_macrophage_p20_1.sorted.RPGC.bw
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h3 id=other-important-files>Other important files<a class=headerlink href=#other-important-files title="Permanent link">&para;</a></h3> <p>Some of the other important files in the <code>working_dir</code> are:</p> <ul> <li><code>cluster.json</code>: outlines the resources requested for each <em>Snakemake</em> rule</li> <li><code>Snakefile</code>: contains all the <em>Snakemake</em> rules</li> <li><code>HPC_usage_table.txt</code>: tabular report of how each <em>Snakemake</em> rule utilized the HPC cluster with details</li> <li><code>run.json</code>: json file saving all GUI selections</li> <li><code>peakcall.tab</code>: tab-delimited file defining which samples are ChIP and what are their corresponding input samples</li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── cluster.json
+├── Snakefile
+├── HPC_usage_table.txt
+├── run.json
+├── peakcall.tab
+├── ...
+├── ...
+</code></pre></div> <p>All other folder and files in the <code>working_dir</code> are for housekeeping and are required for successful execution of the CCBR_Pipeliner.</p> <h2 id=phase-2-of-the-chip-seq-pipeline>Phase 2 of the ChIP-seq pipeline<a class=headerlink href=#phase-2-of-the-chip-seq-pipeline title="Permanent link">&para;</a></h2> <p>Successful completion of Phase 2 of the ChIPseq tutorial demo data will create the following file/folder structure in addition to the files created in Phase 1:</p> <h3 id=peak-calls>Peak calls:<a class=headerlink href=#peak-calls title="Permanent link">&para;</a></h3> <h4 id=gem>GEM<a class=headerlink href=#gem title="Permanent link">&para;</a></h4> <p><code>gem</code> folder has a subfolder for each sample, which should contain the files ending with <code>GEM_events.narrowPeak</code> which represent the peak calls from <a href=https://www.encodeproject.org/software/gem/ >GEM</a> in <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format12>narrowPeak</a> format.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── gem
+│   ├── CTCF_ChIP_macrophage_p20_1
+│   │   ├── CTCF_ChIP_macrophage_p20_1.GEM_events.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_1.GEM_events.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1.GPS_events.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_1.GPS_events.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_outputs
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   ├── CTCF_ChIP_macrophage_p20_2
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h4 id=macs2-for-broad-peaks>MACS2 for broad peaks<a class=headerlink href=#macs2-for-broad-peaks title="Permanent link">&para;</a></h4> <p><code>macs2Broad</code> folder has a subfolder for each sample, which should contain the files ending with <code>.broadPeak</code> which represent the peak calls from <a href=https://github.com/macs3-project/MACS>macs2</a> in <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format13>broadPeak</a> format. The peaks are also available in Excel format.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── macsBroad
+│   ├── CTCF_ChIP_macrophage_p20_1
+│   │   ├── CTCF_ChIP_macrophage_p20_1_peaks.broadPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_1_peaks.gappedPeak
+│   │   └── CTCF_ChIP_macrophage_p20_1_peaks.xls
+│   ├── CTCF_ChIP_macrophage_p20_2
+│   │   ├── CTCF_ChIP_macrophage_p20_2_peaks.broadPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_2_peaks.gappedPeak
+│   │   └── CTCF_ChIP_macrophage_p20_2_peaks.xls
+│   ├── CTCF_ChIP_macrophage_p3_1
+│   │   ├── CTCF_ChIP_macrophage_p3_1_peaks.broadPeak
+│   │   ├── CTCF_ChIP_macrophage_p3_1_peaks.gappedPeak
+│   │   └── CTCF_ChIP_macrophage_p3_1_peaks.xls
+│   ├── CTCF_ChIP_macrophage_p3_2
+│   │   ├── CTCF_ChIP_macrophage_p3_2_peaks.broadPeak
+│   │   ├── CTCF_ChIP_macrophage_p3_2_peaks.gappedPeak
+│   │   └── CTCF_ChIP_macrophage_p3_2_peaks.xls
+│   ├── CTCF_ChIP_MEF_p20_1
+│   │   ├── CTCF_ChIP_MEF_p20_1_peaks.broadPeak
+│   │   ├── CTCF_ChIP_MEF_p20_1_peaks.gappedPeak
+│   │   └── CTCF_ChIP_MEF_p20_1_peaks.xls
+│   └── CTCF_ChIP_MEF_p20_2
+│       ├── CTCF_ChIP_MEF_p20_2_peaks.broadPeak
+│       ├── CTCF_ChIP_MEF_p20_2_peaks.gappedPeak
+│       └── CTCF_ChIP_MEF_p20_2_peaks.xls
+</code></pre></div> <h4 id=macs2-for-narrow-peaks>MACS2 for narrow peaks<a class=headerlink href=#macs2-for-narrow-peaks title="Permanent link">&para;</a></h4> <p><code>macs2Narrow</code> folder has a subfolder for each sample, which should contain the files ending with <code>.narrowPeak</code> which represent the peak calls from <a href=https://github.com/macs3-project/MACS>macs2</a> in <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format12>narrowPeak</a> format. The peaks are also available in Excel format, along with peak summits in <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format1>bed</a> format.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── macsNarrow
+│   ├── CTCF_ChIP_macrophage_p20_1
+│   │   ├── CTCF_ChIP_macrophage_p20_1_peaks.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_1_peaks.xls
+│   │   └── CTCF_ChIP_macrophage_p20_1_summits.bed
+│   ├── CTCF_ChIP_macrophage_p20_2
+│   │   ├── CTCF_ChIP_macrophage_p20_2_peaks.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p20_2_peaks.xls
+│   │   └── CTCF_ChIP_macrophage_p20_2_summits.bed
+│   ├── CTCF_ChIP_macrophage_p3_1
+│   │   ├── CTCF_ChIP_macrophage_p3_1_peaks.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p3_1_peaks.xls
+│   │   └── CTCF_ChIP_macrophage_p3_1_summits.bed
+│   ├── CTCF_ChIP_macrophage_p3_2
+│   │   ├── CTCF_ChIP_macrophage_p3_2_peaks.narrowPeak
+│   │   ├── CTCF_ChIP_macrophage_p3_2_peaks.xls
+│   │   └── CTCF_ChIP_macrophage_p3_2_summits.bed
+│   ├── CTCF_ChIP_MEF_p20_1
+│   │   ├── CTCF_ChIP_MEF_p20_1_peaks.narrowPeak
+│   │   ├── CTCF_ChIP_MEF_p20_1_peaks.xls
+│   │   └── CTCF_ChIP_MEF_p20_1_summits.bed
+│   └── CTCF_ChIP_MEF_p20_2
+│       ├── CTCF_ChIP_MEF_p20_2_peaks.narrowPeak
+│       ├── CTCF_ChIP_MEF_p20_2_peaks.xls
+│       └── CTCF_ChIP_MEF_p20_2_summits.bed
+</code></pre></div> <h4 id=sicer>Sicer<a class=headerlink href=#sicer title="Permanent link">&para;</a></h4> <p><code>sicer</code> folder has a subfolder for each sample which contains the peakcalls from <a href=https://zanglab.github.io/SICER2/ >sicer</a> in <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format1>bed</a>, <a href=https://genome.ucsc.edu/FAQ/FAQformat.html#format13>broadPeak</a> and tabular formats.</p> <div class=highlight><pre><span></span><code>├── sicer
+│   ├── CTCF_ChIP_macrophage_p20_1
+│   │   ├── CTCF_ChIP_macrophage_p20_1_broadpeaks.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_1_broadpeaks.txt
+│   │   └── CTCF_ChIP_macrophage_p20_1_sicer.broadPeak
+│   ├── CTCF_ChIP_macrophage_p20_2
+│   │   ├── CTCF_ChIP_macrophage_p20_2_broadpeaks.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_2_broadpeaks.txt
+│   │   └── CTCF_ChIP_macrophage_p20_2_sicer.broadPeak
+│   ├── CTCF_ChIP_macrophage_p3_1
+│   │   ├── CTCF_ChIP_macrophage_p3_1_broadpeaks.bed
+│   │   ├── CTCF_ChIP_macrophage_p3_1_broadpeaks.txt
+│   │   └── CTCF_ChIP_macrophage_p3_1_sicer.broadPeak
+│   ├── CTCF_ChIP_macrophage_p3_2
+│   │   ├── CTCF_ChIP_macrophage_p3_2_broadpeaks.bed
+│   │   ├── CTCF_ChIP_macrophage_p3_2_broadpeaks.txt
+│   │   └── CTCF_ChIP_macrophage_p3_2_sicer.broadPeak
+│   ├── CTCF_ChIP_MEF_p20_1
+│   │   ├── CTCF_ChIP_MEF_p20_1_broadpeaks.bed
+│   │   ├── CTCF_ChIP_MEF_p20_1_broadpeaks.txt
+│   │   └── CTCF_ChIP_MEF_p20_1_sicer.broadPeak
+│   └── CTCF_ChIP_MEF_p20_2
+│       ├── CTCF_ChIP_MEF_p20_2_broadpeaks.bed
+│       ├── CTCF_ChIP_MEF_p20_2_broadpeaks.txt
+│       └── CTCF_ChIP_MEF_p20_2_sicer.broadPeak
+</code></pre></div> <h3 id=peaks-based-qc>Peaks-based QC<a class=headerlink href=#peaks-based-qc title="Permanent link">&para;</a></h3> <h4 id=fripjaccard>FRiP/Jaccard<a class=headerlink href=#fripjaccard title="Permanent link">&para;</a></h4> <p><a href=https://www.encodeproject.org/data-standards/terms/ >FRiP</a> and <a href=https://bedtools.readthedocs.io/en/latest/content/tools/jaccard.html>jaccard</a> barplots/scatterplots/table are saved in the <code>PeakQC</code> folder for each of the peak callers:</p> <ul> <li>gem </li> <li>macs <ul> <li>broad </li> <li>narrow </li> </ul> </li> <li>sicer </li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── PeakQC
+│   ├── gem.FRiP_barplot.png
+│   ├── gem.FRiP_scatterplot.png
+│   ├── gem.FRiP_table.txt
+│   ├── gem.jaccard_heatmap.pdf
+│   ├── gem.jaccard_PCA.pdf
+│   ├── gem_jaccard.txt
+│   ├── macsBroad.FRiP_barplot.png
+│   ├── macsBroad.FRiP_scatterplot.png
+│   ├── macsBroad.FRiP_table.txt
+│   ├── macsBroad.jaccard_heatmap.pdf
+│   ├── macsBroad.jaccard_PCA.pdf
+│   ├── macsBroad_jaccard.txt
+│   ├── macsNarrow.FRiP_barplot.png
+│   ├── macsNarrow.FRiP_scatterplot.png
+│   ├── macsNarrow.FRiP_table.txt
+│   ├── macsNarrow.jaccard_heatmap.pdf
+│   ├── macsNarrow.jaccard_PCA.pdf
+│   ├── macsNarrow_jaccard.txt
+│   ├── sicer.FRiP_barplot.png
+│   ├── sicer.FRiP_scatterplot.png
+│   ├── sicer.FRiP_table.txt
+│   ├── sicer.jaccard_heatmap.pdf
+│   ├── sicer.jaccard_PCA.pdf
+│   └── sicer_jaccard.txt
+</code></pre></div> <p>The above files allow you to make inter-sample comparison for a peak caller at a time. If you want to compare accross peak caller then you can you the following files in <code>PeakQC</code> folder.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── PeakQC
+│   ├── jaccard_heatmap.pdf
+│   ├── jaccard_PCA.pdf
+│   └── jaccard.txt
+</code></pre></div> <h4 id=replicate-concordance-with-idr>Replicate concordance with IDR<a class=headerlink href=#replicate-concordance-with-idr title="Permanent link">&para;</a></h4> <p><code>IDR</code> folder contains the outputs generated by comparing replicates peaks using <a href=https://www.encodeproject.org/software/idr/ >idr</a> for the following peak callers:</p> <ul> <li>sicer</li> <li>macs2<ul> <li>broad</li> <li>narrow</li> </ul> </li> </ul> <p>Please note that IDR is not run for GEM.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── IDR
+│   ├── macsBroad
+│   │   ├── Macrophage_p20
+│   │   │   ├── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt
+│   │   │   └── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt.png
+│   │   ├── Macrophage_p3
+│   │   │   ├── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt
+│   │   │   └── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt.png
+│   │   └── MEF_p20
+│   │       ├── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt
+│   │       └── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt.png
+│   ├── macsNarrow
+│   │   ├── Macrophage_p20
+│   │   │   ├── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt
+│   │   │   └── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt.png
+│   │   ├── Macrophage_p3
+│   │   │   ├── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt
+│   │   │   └── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt.png
+│   │   └── MEF_p20
+│   │       ├── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt
+│   │       └── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt.png
+│   └── sicer
+│       ├── Macrophage_p20
+│       │   ├── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt
+│       │   └── CTCF_ChIP_macrophage_p20_1_vs_CTCF_ChIP_macrophage_p20_2.idrValue.txt.png
+│       ├── Macrophage_p3
+│       │   ├── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt
+│       │   └── CTCF_ChIP_macrophage_p3_1_vs_CTCF_ChIP_macrophage_p3_2.idrValue.txt.png
+│       └── MEF_p20
+│           ├── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt
+│           └── CTCF_ChIP_MEF_p20_1_vs_CTCF_ChIP_MEF_p20_2.idrValue.txt.png
+</code></pre></div> <h3 id=peak-annotations-with-uropa>Peak annotations with UROPA<a class=headerlink href=#peak-annotations-with-uropa title="Permanent link">&para;</a></h3> <p><a href=https://github.molgen.mpg.de/pages/loosolab/www/software/Uropa/ >UROPA</a> annotations are provided while prioritizing the following genomic features:</p> <ul> <li>all genes</li> <li>protein-coding genes</li> <li>transcription start sites of all genes</li> <li>transcription start sites of protein-coding genes</li> </ul> <p>Files are saved for all four peak callers (gem/macs2Narrow/macs2Broad/sicer) in individual subfolders for all called peaks. Similarly the DiffBind results are also annotated with UROPA in the <code>DiffBind</code> folder if any contrasts are provided at the time of running phase2 of the pipeline.</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── UROPA_annotations
+│   ├── gem
+│   │   ├── CTCF_ChIP_macrophage_p20_1.gem.genes.json
+│   │   ├── CTCF_ChIP_macrophage_p20_1.gem.prot.json
+│   │   ├── CTCF_ChIP_macrophage_p20_1.gem.TSSgenes.json
+│   │   ├── CTCF_ChIP_macrophage_p20_1.gem.TSSprot.json
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_genes_allhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_genes_finalhits.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_genes_finalhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_genes_summary.pdf
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_prot_allhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_prot_finalhits.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_prot_finalhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_prot_summary.pdf
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSgenes_allhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSgenes_finalhits.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSgenes_finalhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSgenes_summary.pdf
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSprot_allhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSprot_finalhits.bed
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSprot_finalhits.txt
+│   │   ├── CTCF_ChIP_macrophage_p20_1_gem_uropa_TSSprot_summary.pdf
+│   │   ├── ...
+│   │   ├── ...
+│   ├── macsNarrow
+│   ├── macsBroad
+│   ├── sicer
+│   ├── DiffBind
+</code></pre></div> <h3 id=motif-analysis-with-homer>Motif analysis with HOMER<a class=headerlink href=#motif-analysis-with-homer title="Permanent link">&para;</a></h3> <p><em>de novo</em> and known motif enrichment is performed using <a href=http://homer.ucsd.edu/homer/ >HOMER</a> with the entire genome as background. The <code>HOMER_motifs</code> folder contains a subfolder for all four peak callers (gem/macsBroad/macsNarrow/sicer). Each of these subfolders further contain a subfolder per sample peak call as shown below:</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── HOMER_motifs
+│   ├── macsBroad
+│   │   ├── CTCF_ChIP_macrophage_p20_1_macsBroad_GW
+│   │   │   ├── homerMotifs.all.motifs
+│   │   │   ├── homerMotifs.motifs10
+│   │   │   ├── homerMotifs.motifs12
+│   │   │   ├── homerMotifs.motifs8
+│   │   │   ├── homerResults
+│   │   │   ├── ...
+│   │   │   ├── ...
+│   │   │   ├── homerResults.html
+│   │   │   ├── knownResults
+│   │   │   ├── knownResults.html
+│   │   │   ├── knownResults.txt
+│   │   │   │   ├── ...
+│   │   │   │   ├── ...
+│   │   ├── CTCF_ChIP_macrophage_p20_2_macsBroad_GW
+│   │   ├── CTCF_ChIP_macrophage_p3_1_macsBroad_GW   
+│   │   ├── CTCF_ChIP_macrophage_p3_2_macsBroad_GW
+│   │   ├── ...
+│   │   ├── ...
+│   ├── macsNarrow
+│   │   ├── CTCF_ChIP_macrophage_p20_1_macsNarrow_GW
+│   │   ├── CTCF_ChIP_macrophage_p20_2_macsNarrow_GW
+│   │   ├── CTCF_ChIP_macrophage_p3_1_macsNarrow_GW   
+│   │   ├── CTCF_ChIP_macrophage_p3_2_macsNarrow_GW
+│   │   ├── ...
+│   │   ├── ...
+│   ├── sicer
+│   │   ├── CTCF_ChIP_macrophage_p20_1_sicer_GW
+│   │   ├── CTCF_ChIP_macrophage_p20_2_sicer_GW
+│   │   ├── CTCF_ChIP_macrophage_p3_1_sicer_GW   
+│   │   ├── CTCF_ChIP_macrophage_p3_2_sicer_GW
+│   │   ├── ...
+│   │   ├── ...
+</code></pre></div> <h3 id=diffbind-results-optional>DiffBind results (Optional)<a class=headerlink href=#diffbind-results-optional title="Permanent link">&para;</a></h3> <p><a href=https://www.bioconductor.org/packages/release/bioc/html/DiffBind.html>DiffBind</a> is run for all contrast provided in the <code>contrast.tab</code> file using:</p> <ul> <li>DESeq2</li> <li>EdgeR</li> </ul> <p>Each contrasts' results are saved in a separate subfolder along with a combined html report as shown below:</p> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── DiffBind
+│   ├── Macrophage_p3_vs_Macrophage_p20-gem
+│   │   ├── DiffBind_pipeliner.Rmd
+│   │   ├── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind_Deseq2.bed
+│   │   ├── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind_Deseq2.txt
+│   │   ├── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind_EdgeR.bed
+│   │   ├── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind_EdgeR.txt
+│   │   ├── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind.html
+│   │   └── Macrophage_p3_vs_Macrophage_p20-gem_Diffbind_prep.csv
+│   ├── Macrophage_p3_vs_Macrophage_p20-macsNarrow
+│   │   ├── ...
+│   │   ├── ...
+│   ├── Macrophage_p3_vs_Macrophage_p20-macsBroad
+│   │   ├── ...
+│   │   ├── ...
+│   ├── Macrophage_p3_vs_Macrophage_p20-sicer
+│   │   ├── ...
+│   │   ├── ...
+│   ├── ...
+│   ├── ...
+</code></pre></div> <h3 id=other-important-files_1>Other important files<a class=headerlink href=#other-important-files_1 title="Permanent link">&para;</a></h3> <p>Some of the other important files in the <code>working_dir</code> are:</p> <ul> <li><code>contrast.tab</code>: if contrasts are supplied for running <em>DiffBind</em>, then they are saved in this tab-delimited file</li> <li><code>HPC_usage_table.txt</code>: tabular report of how each <em>Snakemake</em> rule utilized the HPC cluster with details. The older version of this file from the phase1 execution is also retained by renaming it.</li> </ul> <div class=highlight><pre><span></span><code>&lt;working_dir&gt;
+│ 
+│ 
+├── ...
+├── ...
+├── contrast.tab
+├── HPC_usage_table.txt
+├── HPC_usage_table.txt.2020_06_22_05_14_24
+├── ...
+├── ...
+</code></pre></div> <p>All other folder and files in the <code>working_dir</code> are for housekeeping and are required for successful execution of the CCBR_Pipeliner.</p> <hr> <div class=md-source-date> <small> Last update: 2021-02-22 </small> </div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid" aria-label=Footer> <a href=../ChIP-seq/ title="User Tutorial" class="md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Previous </span> User Tutorial </div> </div> </a> <a href=../ChIP-seq-tools/ title=Resources class="md-footer-nav__link md-footer-nav__link--next" rel=next> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Next </span> Resources </div> </div> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> Copyright &copy; 2020 CCBR </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-footer-social> <a href=http://bioinformatics.cancer.gov target=_blank rel=noopener title=bioinformatics.cancer.gov class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"/></svg> </a> <a href=https://github.com/CCBR target=_blank rel=noopener title=github.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> <a href=https://hub.docker.com/orgs/nciccbr/repositories target=_blank rel=noopener title=hub.docker.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg> </a> </div> </div> </div> </footer> </div> <script src=../../assets/javascripts/vendor.592d4e23.min.js></script> <script src=../../assets/javascripts/bundle.806ca5c4.min.js></script><script id=__lang type=application/json>{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script> <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.01088dc6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script> </body> </html>
