@@ -194,6 +194,19 @@ modue load snakemake/5.1.3
 snakemake --unlock
 ```
 
+**Q. Why am I getting a message saying `MissingInputException in line ...` when I do the dry-run?**
+
+**A.** This error usually occurs when snakemake is terminated ungracefully. Did you forcefully cancel a running pipeline? Or did one of your running pipelines abruptly end? Either way, the solution is straight-forward. Please go to your pipeline's output directory, and rename or delete the following hidden directory: `.snakemake/`. This directory contains metadata pertaining any snakemake runs inside that working directory. Sometimes when a pipeline is pre-maturely or forcefully terminated, a few files related to tracking temp() files are not deleted and snakemake raises a MissingInputException.  
+
+```bash
+# Navigate to working directory
+cd /path/to/working/dir
+
+# Rename .snakemake directory to something else
+# And try re-dry running the pipeline
+mv .snakemake .old_snakemake
+```
+
 
 <!-- Relative links -->
   [1]: contact-us.md
