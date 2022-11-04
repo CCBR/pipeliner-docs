@@ -42,7 +42,7 @@
 
 |           Tool              |      Version    |     Notes       |
 | --------------------------- | --------------- | --------------- | 
-|      Uropa<sup>22</sup>     |      2.0.3      |                 |
+|      Uropa<sup>22</sup>     |      4.0.2      |                 |
 |      Homer<sup>23</sup>     |      4.10.1     |                 |
 |      IDR<sup>24</sup>       |      2.0.3      |                 |
 |      Jaccard                |                 |                 |
