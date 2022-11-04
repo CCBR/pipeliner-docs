@@ -1,0 +1,248 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Pipeliner is an open-source and scalable solution for analyzing  next-generation sequencing data. Pipeliner provides access to  the same best-practices NGS pipelines developed and benchmarked  by experts at CCBR and NCBR. This repository is the main source  of documentation for users and developers working with or  contributing to Pipeliner."><meta name=author content="Skyler Kuhn"><link rel=icon href=../../assets/favicon/favicon.ico><meta name=generator content="mkdocs-1.4.2, mkdocs-material-8.3.0"><title>Output Files - Pipeliner Documentation</title><link rel=stylesheet href=../../assets/stylesheets/main.fd896c8a.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.cbb835fc.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary data-md-color-accent> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#inputs class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="Pipeliner Documentation" class="md-header__button md-logo" aria-label="Pipeliner Documentation" data-md-component=logo> <img src=../../assets/icons/doc-book.svg alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> Pipeliner Documentation </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Output Files </span> </div> </div> </div> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/CCBR/Pipeliner title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> CCBR/Pipeliner </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="Pipeliner Documentation" class="md-nav__button md-logo" aria-label="Pipeliner Documentation" data-md-component=logo> <img src=../../assets/icons/doc-book.svg alt=logo> </a> Pipeliner Documentation </label> <div class=md-nav__source> <a href=https://github.com/CCBR/Pipeliner title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> CCBR/Pipeliner </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> Home </a> </li> <li class=md-nav__item> <a href=../../about/ class=md-nav__link> About </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3> Getting started <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label="Getting started" data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Getting started </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_1 type=checkbox id=__nav_3_1> <label class=md-nav__link for=__nav_3_1> Users <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Users data-md-level=2> <label class=md-nav__title for=__nav_3_1> <span class="md-nav__icon md-icon"></span> Users </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../dev/coming-soon/ class=md-nav__link> Prerequisites </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ class=md-nav__link> Installation </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3_2 type=checkbox id=__nav_3_2> <label class=md-nav__link for=__nav_3_2> Developers <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Developers data-md-level=2> <label class=md-nav__title for=__nav_3_2> <span class="md-nav__icon md-icon"></span> Developers </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../dev/coming-soon/ class=md-nav__link> Installation </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ class=md-nav__link> Customization </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4 type=checkbox id=__nav_4 checked> <label class=md-nav__link for=__nav_4> Pipelines <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Pipelines data-md-level=1> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Pipelines </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_1 type=checkbox id=__nav_4_1> <label class=md-nav__link for=__nav_4_1> ChIP-seq <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=ChIP-seq data-md-level=2> <label class=md-nav__title for=__nav_4_1> <span class="md-nav__icon md-icon"></span> ChIP-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../ChIP-seq/ChIP-seq/ class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../ChIP-seq/ChIP-seq-output-files/ class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../ChIP-seq/ChIP-seq-tools/ class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_2 type=checkbox id=__nav_4_2> <label class=md-nav__link for=__nav_4_2> RNA-seq <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=RNA-seq data-md-level=2> <label class=md-nav__title for=__nav_4_2> <span class="md-nav__icon md-icon"></span> RNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../RNA-seq/Theory-and-practical-guide-for-RNA-seq/ class=md-nav__link> Theory </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Gene-and-isoform-expression-overview/ class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/TLDR-RNA-seq/ class=md-nav__link> Quick Start </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Gene-and-isoform-expression-guided-tutorial/ class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../RNA-seq/Differential-expression-pipeline-tools-and-versions/ class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_3 type=checkbox id=__nav_4_3 checked> <label class=md-nav__link for=__nav_4_3> miRNA-seq <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=miRNA-seq data-md-level=2> <label class=md-nav__title for=__nav_4_3> <span class="md-nav__icon md-icon"></span> miRNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../overview-miRNA-seq/ class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../TLDR-miRNASeq/ class=md-nav__link> User Tutorial </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Output Files <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Output Files </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#inputs class=md-nav__link> Inputs </a> <nav class=md-nav aria-label=Inputs> <ul class=md-nav__list> <li class=md-nav__item> <a href=#initial-input-files class=md-nav__link> Initial input files </a> </li> <li class=md-nav__item> <a href=#input-tab-files class=md-nav__link> Input tab files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#quality-control class=md-nav__link> Quality Control </a> <nav class=md-nav aria-label="Quality Control"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#pre-trim-fastqc class=md-nav__link> Pre-trim FastQC </a> </li> <li class=md-nav__item> <a href=#adapter-trimmed-reads class=md-nav__link> Adapter trimmed reads </a> </li> <li class=md-nav__item> <a href=#kraken class=md-nav__link> Kraken </a> </li> <li class=md-nav__item> <a href=#post-trim-fastqc class=md-nav__link> Post-trim FastQC </a> </li> <li class=md-nav__item> <a href=#fastq-screen class=md-nav__link> FastQ Screen </a> </li> <li class=md-nav__item> <a href=#multiqc-report class=md-nav__link> MultiQC Report </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#mirdeep2-outputs class=md-nav__link> miRDeep2 Outputs </a> <nav class=md-nav aria-label="miRDeep2 Outputs"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#preliminary-fasta-conversion class=md-nav__link> Preliminary FASTA conversion </a> </li> <li class=md-nav__item> <a href=#mirdeep2-mapper class=md-nav__link> miRDeep2 Mapper </a> </li> <li class=md-nav__item> <a href=#mirdeep2-annotated-reads-only class=md-nav__link> miRDeep2: Annotated Reads Only </a> </li> <li class=md-nav__item> <a href=#mirdeep2-novel-mirna-alignment class=md-nav__link> miRDeep2: Novel miRNA Alignment </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#differential-expression class=md-nav__link> Differential expression </a> </li> <li class=md-nav__item> <a href=#miscellaneous-outputs-from-the-pipeliner-snakemake class=md-nav__link> Miscellaneous outputs from the Pipeliner Snakemake </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../miRSeq-Tools-and-Versions/ class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_4 type=checkbox id=__nav_4_4> <label class=md-nav__link for=__nav_4_4> scRNA-seq <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=scRNA-seq data-md-level=2> <label class=md-nav__title for=__nav_4_4> <span class="md-nav__icon md-icon"></span> scRNA-seq </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../scRNA-seq/overview-scRNA-seq/ class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/TLDR-Single-Cell-RNASeq/ class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/scRNASeq-Output-Files/ class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../scRNA-seq/scRNASeq-Tools-and-Versions/ class=md-nav__link> Resources </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4_5 type=checkbox id=__nav_4_5> <label class=md-nav__link for=__nav_4_5> WES/WGS <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=WES/WGS data-md-level=2> <label class=md-nav__title for=__nav_4_5> <span class="md-nav__icon md-icon"></span> WES/WGS </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-overview/ class=md-nav__link> Overview </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/TLDR-WEG-seq/ class=md-nav__link> User Tutorial </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-output/ class=md-nav__link> Output Files </a> </li> <li class=md-nav__item> <a href=../../WEG-seq/Whole-exome-genome-tools-and-versions/ class=md-nav__link> Resources </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_5 type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5> FAQ <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=FAQ data-md-level=1> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> FAQ </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../troubleshooting/ class=md-nav__link> Troubleshooting </a> </li> <li class=md-nav__item> <a href=../../dev/coming-soon/ class=md-nav__link> Data Privacy </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../community-and-contribution/ class=md-nav__link> Contribute </a> </li> <li class=md-nav__item> <a href=../../changelog/ class=md-nav__link> Changelog </a> </li> <li class=md-nav__item> <a href=../../contact-us/ class=md-nav__link> Contact </a> </li> <li class=md-nav__item> <a href=../../license/ class=md-nav__link> License </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#inputs class=md-nav__link> Inputs </a> <nav class=md-nav aria-label=Inputs> <ul class=md-nav__list> <li class=md-nav__item> <a href=#initial-input-files class=md-nav__link> Initial input files </a> </li> <li class=md-nav__item> <a href=#input-tab-files class=md-nav__link> Input tab files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#quality-control class=md-nav__link> Quality Control </a> <nav class=md-nav aria-label="Quality Control"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#pre-trim-fastqc class=md-nav__link> Pre-trim FastQC </a> </li> <li class=md-nav__item> <a href=#adapter-trimmed-reads class=md-nav__link> Adapter trimmed reads </a> </li> <li class=md-nav__item> <a href=#kraken class=md-nav__link> Kraken </a> </li> <li class=md-nav__item> <a href=#post-trim-fastqc class=md-nav__link> Post-trim FastQC </a> </li> <li class=md-nav__item> <a href=#fastq-screen class=md-nav__link> FastQ Screen </a> </li> <li class=md-nav__item> <a href=#multiqc-report class=md-nav__link> MultiQC Report </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#mirdeep2-outputs class=md-nav__link> miRDeep2 Outputs </a> <nav class=md-nav aria-label="miRDeep2 Outputs"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#preliminary-fasta-conversion class=md-nav__link> Preliminary FASTA conversion </a> </li> <li class=md-nav__item> <a href=#mirdeep2-mapper class=md-nav__link> miRDeep2 Mapper </a> </li> <li class=md-nav__item> <a href=#mirdeep2-annotated-reads-only class=md-nav__link> miRDeep2: Annotated Reads Only </a> </li> <li class=md-nav__item> <a href=#mirdeep2-novel-mirna-alignment class=md-nav__link> miRDeep2: Novel miRNA Alignment </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#differential-expression class=md-nav__link> Differential expression </a> </li> <li class=md-nav__item> <a href=#miscellaneous-outputs-from-the-pipeliner-snakemake class=md-nav__link> Miscellaneous outputs from the Pipeliner Snakemake </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/CCBR/pipeliner-docs/edit/master/docs/miRNA-seq/miRSeq-Output-Files.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg> </a> <h1>Output Files</h1> <h2 id=inputs>Inputs<a class=headerlink href=#inputs title="Permanent link">&para;</a></h2> <h3 id=initial-input-files>Initial input files<a class=headerlink href=#initial-input-files title="Permanent link">&para;</a></h3> <p>These files are generated during the <code>Initialize Directory</code> and are linked from the rawdata directory.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── Control_1_miRNA_S1.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/mirseq/fastq/Control_1_miRNA_S1.R1.fastq.gz
+├── Control_2_miRNA_S2.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/mirseq/fastq/Control_2_miRNA_S2.R1.fastq.gz
+├── ...
+├── ...
+├── TreatmentB_3_miRNA_S11.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/mirseq/fastq/TreatmentB_3_miRNA_S11.R1.fastq.gz
+├── TreatmentB_4_miRNA_S12.R1.fastq.gz -&gt; /data/CCBR_Pipeliner/testdata/mirseq/fastq/TreatmentB_4_miRNA_S12.R1.fastq.gz
+</code></pre></div> <h3 id=input-tab-files>Input tab files<a class=headerlink href=#input-tab-files title="Permanent link">&para;</a></h3> <p>These are the tab-delimited files created by the user to indicate groups and contrasts</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── groups.tab
+├── contrasts.tab
+</code></pre></div> <h2 id=quality-control>Quality Control<a class=headerlink href=#quality-control title="Permanent link">&para;</a></h2> <h3 id=pre-trim-fastqc>Pre-trim FastQC<a class=headerlink href=#pre-trim-fastqc title="Permanent link">&para;</a></h3> <p>These files are available in the <code>rawQC</code> directory and are produced by the first round of FastQC, performed on the reads before adapter trimming.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── rawQC
+│   ├── Control_1_miRNA_S1.R1_fastqc.html
+│   ├── Control_1_miRNA_S1.R1_fastqc.zip
+│   ├── Control_2_miRNA_S2.R1_fastqc.html
+│   ├── Control_2_miRNA_S2.R1_fastqc.zip
+│   ├── ...
+│   ├── TreatmentB_3_miRNA_S11.R1_fastqc.html
+│   ├── TreatmentB_3_miRNA_S11.R1_fastqc.zip
+│   ├── TreatmentB_4_miRNA_S12.R1_fastqc.html
+│   └── TreatmentB_4_miRNA_S12.R1_fastqc.zip
+├── ...
+</code></pre></div> <h3 id=adapter-trimmed-reads>Adapter trimmed reads<a class=headerlink href=#adapter-trimmed-reads title="Permanent link">&para;</a></h3> <p>These files are produced by Cutadapt by trimming the adapter sequences from the read sequences.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── trim
+│   ├── Control_1_miRNA_S1.R1.trim.fastq.gz
+│   ├── Control_2_miRNA_S2.R1.trim.fastq.gz
+│   ├── ...
+│   ├── TreatmentB_3_miRNA_S11.R1.trim.fastq.gz
+│   └── TreatmentB_4_miRNA_S12.R1.trim.fastq.gz
+├── ...
+</code></pre></div> <h3 id=kraken>Kraken<a class=headerlink href=#kraken title="Permanent link">&para;</a></h3> <p>Kraken is a tool for evaluating the degree of contamination in the individual samples and produces html reports for each sample.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── kraken
+│   ├── Control_1_miRNA_S1.trim.fastq.kraken_bacteria.krona.html
+│   ├── Control_1_miRNA_S1.trim.fastq.kraken_bacteria.taxa.txt
+│   ├── Control_2_miRNA_S2.trim.fastq.kraken_bacteria.krona.html
+│   ├── Control_2_miRNA_S2.trim.fastq.kraken_bacteria.taxa.txt
+│   ├── ...
+│   ├── TreatmentB_4_miRNA_S12.trim.fastq.kraken_bacteria.krona.html
+│   └── TreatmentB_4_miRNA_S12.trim.fastq.kraken_bacteria.taxa.txt
+├── ...
+</code></pre></div> <h3 id=post-trim-fastqc>Post-trim FastQC<a class=headerlink href=#post-trim-fastqc title="Permanent link">&para;</a></h3> <p>FastQC is also performed after adapter trimming to evaluate the quality of the reads without appended adapter sequences. It also includes two files containing the read length statistics. These results are available in the QC directory.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── QC
+│   ├── Control_1_miRNA_S1.R1.trim_fastqc.html
+│   ├── Control_1_miRNA_S1.R1.trim_fastqc.zip
+│   ├── Control_2_miRNA_S2.R1.trim_fastqc.html
+│   ├── ...
+│   ├── readlength.err
+│   ├── readlength.txt
+│   ├── ...
+│   ├── TreatmentB_3_miRNA_S11.R1.trim_fastqc.html
+│   ├── TreatmentB_3_miRNA_S11.R1.trim_fastqc.zip
+│   ├── TreatmentB_4_miRNA_S12.R1.trim_fastqc.html
+│   └── TreatmentB_4_miRNA_S12.R1.trim_fastqc.zip
+├── ...
+</code></pre></div> <h3 id=fastq-screen>FastQ Screen<a class=headerlink href=#fastq-screen title="Permanent link">&para;</a></h3> <p>FastQ Screen is run twice, with different configuration files. The results for the first run are stored in the <code>FQscreen</code> directory and perform a preliminary mapping to identify likely species from which the reads were obtained. The second run is stored in the <code>FQscreen2</code> directory and aligns the reads to ribosomal and UniVec sequences.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── FQscreen
+│   ├── Control_1_miRNA_S1.R1.trim_screen.html
+│   ├── Control_1_miRNA_S1.R1.trim_screen.png
+│   ├── Control_1_miRNA_S1.R1.trim_screen.txt
+│   ├── Control_2_miRNA_S2.R1.trim_screen.html
+│   ├── Control_2_miRNA_S2.R1.trim_screen.png
+│   ├── Control_2_miRNA_S2.R1.trim_screen.txt
+│   ├── ...
+│   ├── TreatmentB_4_miRNA_S12.R1.trim_screen.html
+│   ├── TreatmentB_4_miRNA_S12.R1.trim_screen.png
+│   └── TreatmentB_4_miRNA_S12.R1.trim_screen.txt
+├── FQscreen2
+│   ├── Control_1_miRNA_S1.R1.trim_screen.html
+│   ├── Control_1_miRNA_S1.R1.trim_screen.png
+│   ├── Control_1_miRNA_S1.R1.trim_screen.txt
+│   ├── ...
+│   ├── TreatmentB_4_miRNA_S12.R1.trim_screen.html
+│   ├── TreatmentB_4_miRNA_S12.R1.trim_screen.png
+│   └── TreatmentB_4_miRNA_S12.R1.trim_screen.txt
+├── ...
+</code></pre></div> <h3 id=multiqc-report>MultiQC Report<a class=headerlink href=#multiqc-report title="Permanent link">&para;</a></h3> <p>The MultiQC report, which compiles all the results of the different QC programs into a single html report, is in the Reports directory.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── Reports
+│   ├── ...
+│   ├── multiqc_data
+│   │   ├── multiqc_data.json
+│   │   ├── multiqc_fastqc.txt
+│   │   ├── multiqc_fastq_screen.txt
+│   │   ├── multiqc_general_stats.txt
+│   │   ├── multiqc.log
+│   │   └── multiqc_sources.txt
+│   ├── multiqc_report.html
+│   ├── ...
+│   └── ...
+├── ...
+</code></pre></div> <h2 id=mirdeep2-outputs>miRDeep2 Outputs<a class=headerlink href=#mirdeep2-outputs title="Permanent link">&para;</a></h2> <h3 id=preliminary-fasta-conversion>Preliminary FASTA conversion<a class=headerlink href=#preliminary-fasta-conversion title="Permanent link">&para;</a></h3> <p>miRDeep2 operates on FASTA files, while the trimmed data is in FASTQ format. The files are converted to FASTA format using the FASTX-toolkit and compressed for storage <a href=#mirdeep2-mapper>after they are utilized</a>. The conversion is logged for the Snakemake program using file flags.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── fasta
+│   ├── ...
+│   ├── Control_1_miRNA_S1.trimfasta.done
+│   ├── Control_2_miRNA_S2.trimfasta.done
+│   ├── ...
+│   ├── TreatmentB_3_miRNA_S11.trimfasta.done
+│   ├── TreatmentB_4_miRNA_S12.trimfasta.done
+│   └── ...
+├── ...
+</code></pre></div> <h3 id=mirdeep2-mapper>miRDeep2 Mapper<a class=headerlink href=#mirdeep2-mapper title="Permanent link">&para;</a></h3> <p>miRDeep2 performs a preliminary mapping prior to alignment to create a single collapsed FASTA file containing all the reads. This requires the creation of said FASTA file and a mapping config file containing sample abbreviations. It then performs alignment with Bowtie 1 to the reference genome and the output is stored as <code>trimmed.arf</code> in the working directory. Since the raw FASTA files are no longer necessary, they are compressed into a <code>.tar.gz</code> file.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── ...
+├── fasta
+│   ├── collapsed_trim.fa
+│   ├── ...
+│   └── trim.tar.gz
+├── ...
+├── mirdeep_config.txt
+├── ...
+└── trimmed.arf
+</code></pre></div> <h3 id=mirdeep2-annotated-reads-only>miRDeep2: Annotated Reads Only<a class=headerlink href=#mirdeep2-annotated-reads-only title="Permanent link">&para;</a></h3> <p>If the user has opted to <u>not</u> identify novel microRNAs, the collapsed FASTA file is aligned with Bowtie against the annotated precursor and mature microRNA sequences from miRBase, and the results are stored in a counts file in the directory <code>mirdeep2_out</code>. The final results, with the assigned sample names, are stored in <code>mirdeep2_results/annotated_counts.txt</code>.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── mirdeep2_out
+│   ├── expression_&lt;stamp&gt;.html
+│   ├── expression_analyses
+│   │   └── expression_analyses_&lt;stamp&gt;
+│   │       ├── bowtie_mature.out
+│   │       ├── bowtie_reads.out
+│   │       ├── collapsed_trim.fa.converted
+│   │       ├── collapsed_trim.fa_mapped.arf
+│   │       ├── collapsed_trim.fa_mapped.bwt
+│   │       ├── expression_1594075822.html
+│   │       ├── mature2hairpin
+│   │       ├── mature.converted
+│   │       ├── mature.fa_mapped.arf
+│   │       ├── mature.fa_mapped.bwt
+│   │       ├── miRBase.mrd
+│   │       ├── miRNA_expressed.csv
+│   │       ├── miRNA_not_expressed.csv
+│   │       ├── miRNA_precursor.1.ebwt
+│   │       ├── miRNA_precursor.2.ebwt
+│   │       ├── miRNA_precursor.3.ebwt
+│   │       ├── miRNA_precursor.4.ebwt
+│   │       ├── miRNA_precursor.rev.1.ebwt
+│   │       ├── miRNA_precursor.rev.2.ebwt
+│   │       ├── precursor.converted
+│   │       ├── read_occ
+│   │       └── rna.ps
+│   └── miRNAs_expressed_all_samples.txt
+├── mirdeep2_results
+│   └── annotated_counts.txt
+├── ...
+</code></pre></div> <h3 id=mirdeep2-novel-mirna-alignment>miRDeep2: Novel miRNA Alignment<a class=headerlink href=#mirdeep2-novel-mirna-alignment title="Permanent link">&para;</a></h3> <p>If the user has opted to have miRDeep2 identify novel miRNAs, several additional outputs are generated, including * Novel hairpin and mature FASTA references, which are stored in the <code>fasta</code> directory * Alignments to the annotated miRBase reference in <code>mirdeep2_1p</code> * Alignments to the novel reference sequences in <code>mirdeep2_2p</code> * Counts for annotated and novel reference sequences in <code>mirdeep2_results</code></p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+│
+│
+├── fasta
+│   ├── collapsed_trim.fa
+│   ├── ...
+│   ├── novel_hairpin.fa
+│   ├── novel_mature.fa
+│   ├── ...
+│   ├── TreatmentB_3_miRNA_S11.trimfasta.done
+│   ├── TreatmentB_4_miRNA_S12.trimfasta.done
+│   └── trim.tar.gz
+├── mirdeep2_1p
+│   ├── dir_prepare_signature1594151705
+│   │   ├── mature_vs_precursors.arf
+│   │   ├── mature_vs_precursors.bwt
+│   │   ├── precursors.ebwt.1.ebwt
+│   │   ├── precursors.ebwt.2.ebwt
+│   │   ├── ...
+│   │   ├── signature_unsorted.arf.tmp
+│   │   └── signature_unsorted.arf.tmp2
+│   ├── error_07_07_2020_t_15_43_26.log
+│   ├── expression_07_07_2020_t_15_43_26.html
+│   ├── expression_analyses
+│   │   └── expression_analyses_07_07_2020_t_15_43_26
+│   │       ├── bowtie_mature.out
+│   │       ├── bowtie_reads.out
+│   │       ├── collapsed_trim.fa.converted
+│   │       ├── collapsed_trim.fa_mapped.arf
+│   │       ├── ...
+│   │       └── rna.ps
+│   ├── mirna_results_07_07_2020_t_15_43_26
+│   │   ├── known_mature_07_07_2020_t_15_43_26_score-50_to_na.bed
+│   │   ├── known_mature_07_07_2020_t_15_43_26_score-50_to_na.fa
+│   │   ├── ...
+│   │   ├── novel_star_07_07_2020_t_15_43_26_score-50_to_na.bed
+│   │   └── novel_star_07_07_2020_t_15_43_26_score-50_to_na.fa
+│   ├── miRNAs_expressed_all_samples_1p.txt
+│   ├── pdfs_07_07_2020_t_15_43_26
+│   │   ├── chr10_23178.pdf
+│   │   ├── chr10_23253.pdf
+│   │   ├── ...
+│   │   └── chrY_45431.pdf
+│   ├── result_07_07_2020_t_15_43_26.bed
+│   ├── result_07_07_2020_t_15_43_26.csv
+│   └── result_07_07_2020_t_15_43_26.html
+├── mirdeep2_2p
+│   ├── expression_1594185150.html
+│   ├── expression_analyses
+│   │   └── expression_analyses_1594185150
+│   │       ├── bowtie_mature.out
+│   │       ├── bowtie_reads.out
+│   │       ├── collapsed_trim.fa.converted
+│   │       ├── collapsed_trim.fa_mapped.arf
+│   │       ├── ...
+│   │       ├── novel_mature.fa_mapped.bwt
+│   │       ├── precursor.converted
+│   │       ├── read_occ
+│   │       └── rna.ps
+│   ├── novel_miRNAs_expressed_all_samples_2p.txt
+│   └── pdfs_1594185150
+│       ├── chr10_23178.pdf
+│       ├── chr10_23253.pdf
+│       ├── ...
+├── ...
+├── mirdeep2_results
+│   ├── annotatedCounts.txt
+│   └── novelCounts.txt
+</code></pre></div> <h2 id=differential-expression>Differential expression<a class=headerlink href=#differential-expression title="Permanent link">&para;</a></h2> <p>Coming soon!</p> <h2 id=miscellaneous-outputs-from-the-pipeliner-snakemake>Miscellaneous outputs from the Pipeliner Snakemake<a class=headerlink href=#miscellaneous-outputs-from-the-pipeliner-snakemake title="Permanent link">&para;</a></h2> <p>Many of these files are produced by Pipeliner in order to run the pipeline to completion or as background outputs.</p> <div class=highlight><pre><span></span><code>&lt;WorkingDirectory&gt;
+|
+|
+├── cluster.json
+├── HPC_usage_table.txt
+├── pairs
+├── pipeline_ctrl.sh
+├── Reports
+│   └── ...
+├── run.json
+├── samples
+├── Scripts
+│   └── ...
+├── slurmfiles
+│   └── ...
+├── Snakefile
+└── submit_slurm.sh
+</code></pre></div> <hr> <div class=md-source-file> <small> Last update: 2022-11-04 </small> </div> </article> </div> </div> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=Footer> <a href=../TLDR-miRNASeq/ class="md-footer__link md-footer__link--prev" aria-label="Previous: User Tutorial" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Previous </span> User Tutorial </div> </div> </a> <a href=../miRSeq-Tools-and-Versions/ class="md-footer__link md-footer__link--next" aria-label="Next: Resources" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> Next </span> Resources </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2020 CCBR </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-social> <a href=http://bioinformatics.cancer.gov target=_blank rel=noopener title=bioinformatics.cancer.gov class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M319.9 320c57.41 0 103.1-46.56 103.1-104s-46.54-104-103.1-104c-57.41 0-103.1 46.56-103.1 104-.9 57.4 45.7 104 103.1 104zm50 32h-99.8C191.6 352 128 411.7 128 485.3c0 14.8 12.7 26.7 28.4 26.7h327.2c15.7 0 28.4-11.9 28.4-26.7 0-73.6-63.6-133.3-142.1-133.3zM512 160c44.18 0 80-35.82 80-80S556.2 0 512 0c-44.18 0-80 35.82-80 80s35.8 80 80 80zm-328.1 56c0-5.449.982-10.63 1.609-15.91C174.6 194.1 162.6 192 149.9 192H88.08C39.44 192 0 233.8 0 285.3 0 295.6 7.887 304 17.62 304h199.5c-20.42-23.8-33.22-54.3-33.22-88zM128 160c44.18 0 80-35.82 80-80S172.2 0 128 0C83.82 0 48 35.82 48 80s35.82 80 80 80zm423.9 32h-61.84c-12.8 0-24.88 3.037-35.86 8.24.6 5.26 1.6 10.36 1.6 15.76 0 33.71-12.78 64.21-33.16 88h199.7c9.76 0 17.66-8.4 17.66-18.7 0-51.5-39.4-93.3-88.1-93.3z"/></svg> </a> <a href=https://github.com/CCBR target=_blank rel=noopener title=github.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> <a href=https://hub.docker.com/orgs/nciccbr/repositories target=_blank rel=noopener title=hub.docker.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script> <script src=../../assets/javascripts/bundle.0f659f14.min.js></script> </body> </html>
